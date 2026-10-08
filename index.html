@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="ko" data-lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+<meta name="description" content="발전사업 개발·인허가부터 육상변전소 EPCC 건설까지, 해상풍력 밸류체인을 단계별로 수행한 PMP 보유 엔지니어">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="성하준 | 해상풍력 · 신재생에너지 프로젝트 매니저 / 엔지니어">
+<meta property="og:description" content="발전사업 개발·인허가부터 육상변전소 EPCC 건설까지, 해상풍력 밸류체인을 단계별로 수행한 PMP 보유 엔지니어">
+<title data-title-ko="성하준 | 해상풍력 · 신재생에너지 프로젝트 매니저 / 엔지니어" data-title-en="Hajun Sung | Offshore Wind &amp; Renewable Energy Project Manager">성하준 | 해상풍력 · 신재생에너지 프로젝트 매니저 / 엔지니어</title>
+<style>
+/* ========== 토큰 — DESIGN.md Offshore Energy Executive System ========== */
+:root {
+  --bg: #0B111E;
+  --surface-1: #131C2E;
+  --surface-2: #1E293B;
+  --surface-3: #0F172A;
+  --text: #F8FAFC;
+  --text-2: #94A3B8;
+  --text-3: #64748B;
+  --primary: #10B981;
+  --primary-bright: #34D399;
+  --secondary: #06B6D4;
+  --secondary-bright: #22D3EE;
+  --tertiary: #14B8A6;
+  --tertiary-bright: #2DD4BF;
+  --line: rgba(148, 163, 184, 0.14);
+  --line-strong: rgba(148, 163, 184, 0.26);
+  --line-active: rgba(6, 182, 212, 0.45);
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 32px;
+  --s5: 48px;
+  --s6: 72px;
+  --font: "Inter", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic",
+          system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", "Consolas", "D2Coding", ui-monospace, monospace;
+  --max: 1200px;
+}
+
+/* ========== 리셋 ========== */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  background: var(--bg);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg, table { max-width: 100%; }
+h1, h2, h3, h4 { margin: 0; line-height: 1.3; letter-spacing: -0.02em; font-weight: 700; }
+p { margin: 0 0 var(--s2); }
+p:last-child { margin-bottom: 0; }
+ul { margin: 0; padding-left: 1.15em; }
+li { margin: 0 0 6px; }
+li:last-child { margin-bottom: 0; }
+a { color: var(--secondary-bright); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { color: var(--text); font-weight: 700; }
+:focus-visible { outline: 2px solid var(--secondary); outline-offset: 2px; border-radius: 2px; }
+
+/* ========== 레이아웃 ========== */
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding-inline: var(--s3); }
+@media (max-width: 640px) { .wrap { padding-inline: var(--s2); } }
+
+.section { padding-block: var(--s6); border-top: 1px solid var(--line); }
+.section:first-of-type { border-top: 0; }
+@media (max-width: 640px) { .section { padding-block: var(--s5); } }
+
+.label-caps {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.sec-head { margin-bottom: var(--s4); }
+.sec-head .label-caps { color: var(--secondary); display: block; margin-bottom: var(--s1); }
+.sec-head h2 { font-size: clamp(22px, 4vw, 30px); }
+.sec-head .lead {
+  margin: var(--s2) 0 0;
+  color: var(--text-2);
+  font-size: 15px;
+  max-width: 62ch;
+}
+.num { font-variant-numeric: tabular-nums; }
+
+/* ========== 스킵 링크 ========== */
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--primary); color: #04231A; padding: 10px 16px;
+  border-radius: 0 0 var(--r-sm) 0; font-weight: 600; font-size: 14px;
+}
+.skip:focus { left: 0; }
+
+/* ========== 헤더 ========== */
+.site-head {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(11, 17, 30, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.head-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--s2); min-height: 68px;
+}
+.brand { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.brand-line { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.brand-name { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; }
+.brand-rom {
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.06em; color: var(--primary); text-transform: uppercase;
+}
+.brand-role { font-size: 11px; color: var(--text-3); letter-spacing: 0.01em; }
+
+.site-nav { display: flex; gap: 2px; }
+.site-nav a {
+  padding: 7px 11px; border-radius: var(--r-sm); font-size: 13px;
+  color: var(--text-2); white-space: nowrap;
+}
+.site-nav a:hover {
+  background: var(--surface-1); color: var(--text); text-decoration: none;
+}
+@media (max-width: 1080px) { .site-nav { display: none; } }
+
+.head-actions { display: flex; align-items: center; gap: var(--s1); flex-shrink: 0; }
+.lang-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--surface-1); border: 1px solid var(--line-strong);
+  border-radius: var(--r-full, 999px); padding: 5px 11px;
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.06em; color: var(--text-2); cursor: pointer;
+}
+.lang-toggle:hover { border-color: var(--line-active); color: var(--text); }
+.lang-toggle .on { color: var(--primary); }
+
+/* ========== 버튼 ========== */
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 18px; border-radius: var(--r-sm);
+  font-size: 13px; font-weight: 600; letter-spacing: 0.01em;
+  border: 1px solid transparent; cursor: pointer; font-family: inherit;
+  min-height: 42px;
+}
+.btn:hover { text-decoration: none; }
+.btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+.btn-primary { background: var(--primary); color: #04231A; }
+.btn-primary:hover { background: var(--primary-bright); box-shadow: 0 0 22px rgba(16,185,129,0.25); }
+.btn-ghost { background: transparent; border-color: var(--line-strong); color: var(--text); }
+.btn-ghost:hover {
+  border-color: var(--secondary); color: var(--secondary-bright);
+  background: rgba(6, 182, 212, 0.08);
+}
+@media (max-width: 760px) { .btn-head-print { display: none; } }
+
+/* ========== 히어로 ========== */
+.hero { position: relative; overflow: hidden; padding-block: var(--s6) var(--s5); }
+.hero::before, .hero::after {
+  content: ""; position: absolute; border-radius: 50%; pointer-events: none;
+  filter: blur(130px); opacity: 0.5;
+}
+.hero::before { width: 420px; height: 420px; top: -180px; left: 12%; background: rgba(16,185,129,0.22); }
+.hero::after { width: 360px; height: 360px; top: 30%; right: -120px; background: rgba(6,182,212,0.18); }
+.hero > * { position: relative; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--surface-1); border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 13px; margin-bottom: var(--s3);
+  max-width: 100%;
+}
+.hero-badge .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--primary); flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(16,185,129,0.18);
+}
+.hero-badge .label-caps { color: var(--primary); font-size: 10px; }
+.hero h1 {
+  font-size: clamp(28px, 6vw, 52px);
+  letter-spacing: -0.03em; line-height: 1.18;
+  max-width: 24ch;
+}
+.hero h1 .accent {
+  background: linear-gradient(100deg, var(--primary-bright), var(--secondary-bright) 70%, var(--tertiary-bright));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: var(--secondary-bright);
+}
+.hero-tagline {
+  margin: var(--s3) 0 0; max-width: 60ch;
+  font-size: clamp(15px, 2vw, 17px); color: var(--text-2); line-height: 1.8;
+}
+.hero-meta {
+  margin-top: var(--s3); display: flex; flex-wrap: wrap; gap: 6px var(--s2);
+  font-size: 13px; color: var(--text-3);
+}
+.hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+.hero-meta span + span::before {
+  content: ""; width: 1px; height: 11px; background: var(--line-strong);
+}
+.hero-cta { display: flex; flex-wrap: wrap; gap: var(--s1); align-items: center; }
+
+/* 텍스트와 인물 사진을 한 줄에 놓는다. 모바일에서는 영역만 재배치해
+   헤드라인 → 사진 → CTA 순으로 쌓는다 (DOM 순서는 그대로 둔다) */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "main photo" "cta photo";
+  align-items: start;
+  gap: var(--s4) var(--s5);
+}
+.hero-main { grid-area: main; min-width: 0; }
+.hero-cta { grid-area: cta; }
+.hero-photo {
+  grid-area: photo; align-self: center; justify-self: end;
+  position: relative; margin: 0;
+  width: clamp(210px, 23vw, 280px);
+}
+/* 히어로의 블러 블롭과 같은 계열로 사진 뒤를 은은하게 받친다 */
+.hero-photo::before {
+  content: ""; position: absolute; inset: -20px -20px -26px;
+  background: radial-gradient(58% 54% at 50% 42%, rgba(16,185,129,0.22), transparent 72%);
+  filter: blur(28px); pointer-events: none;
+}
+/* 아래 모서리의 액센트 바 — h1 그라데이션과 같은 색 흐름 */
+.hero-photo::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px;
+  border-radius: 0 0 var(--r-md) var(--r-md);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+.hero-photo img {
+  position: relative; display: block;
+  width: 100%; height: auto;
+  aspect-ratio: 354 / 472; object-fit: cover;
+  border-radius: var(--r-md);
+  background: var(--surface-1);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "main" "photo" "cta";
+    gap: var(--s3);
+  }
+  .hero-photo { justify-self: start; width: clamp(132px, 36vw, 180px); }
+  .hero-photo::before { inset: -12px; }
+}
+
+/* ========== 핵심 지표 ========== */
+.metrics {
+  display: grid; gap: var(--s2);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 860px) { .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .metrics { grid-template-columns: minmax(0, 1fr); } }
+.metric {
+  background: var(--surface-1); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--s3) var(--s2);
+  display: flex; flex-direction: column; gap: 4px; min-width: 0;
+}
+.metric .label-caps { font-size: 10px; }
+.metric .value {
+  font-size: clamp(22px, 3.4vw, 30px); font-weight: 700;
+  letter-spacing: -0.03em; color: var(--primary);
+  font-variant-numeric: tabular-nums; line-height: 1.15;
+}
+.metric:nth-child(2) .value { color: var(--secondary-bright); }
+.metric:nth-child(3) .value { color: var(--tertiary-bright); }
+.metric:nth-child(4) .value { font-size: clamp(18px, 2.4vw, 22px); color: var(--text); }
+.metric .note { font-size: 11px; color: var(--text-3); line-height: 1.5; }
+
+/* ========== 밸류체인 ========== */
+.vc-flow {
+  display: grid; gap: var(--s2);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+@media (max-width: 980px) { .vc-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .vc-flow { grid-template-columns: minmax(0, 1fr); } }
+
+.vc-step {
+  position: relative; min-width: 0;
+  background: var(--surface-1); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--s3) var(--s2);
+  display: flex; flex-direction: column; gap: var(--s1);
+}
+.vc-step::after {
+  content: ""; position: absolute; z-index: 2;
+  top: 50%; right: -15px; width: 14px; height: 14px;
+  transform: translateY(-50%);
+  background: var(--secondary);
+  clip-path: polygon(0 18%, 52% 18%, 52% 0, 100% 50%, 52% 100%, 52% 82%, 0 82%);
+  opacity: 0.75;
+}
+.vc-step:last-child::after { display: none; }
+/* 2열(2x2) — 1→2, 3→4 만 가로로 잇는다. 2→3 은 줄바꿈이라 화살표를 두지 않는다 */
+@media (max-width: 980px) {
+  .vc-step:nth-child(2)::after { display: none; }
+}
+/* 1열 — 전부 아래를 가리키게 세운다 */
+@media (max-width: 620px) {
+  .vc-step::after {
+    top: auto; bottom: -15px; right: 50%;
+    transform: translateX(50%) rotate(90deg);
+  }
+  .vc-step:nth-child(2)::after { display: block; }
+}
+.vc-head { display: flex; align-items: center; gap: var(--s1); flex-wrap: wrap; }
+.vc-no {
+  font-family: var(--mono); font-size: 12px; font-weight: 700;
+  color: var(--primary); background: rgba(16,185,129,0.13);
+  border: 1px solid rgba(16,185,129,0.28);
+  border-radius: var(--r-sm); padding: 2px 8px;
+  font-variant-numeric: tabular-nums;
+}
+.vc-step:nth-child(2) .vc-no {
+  color: var(--secondary-bright); background: rgba(6,182,212,0.13);
+  border-color: rgba(6,182,212,0.28);
+}
+.vc-step:nth-child(3) .vc-no {
+  color: var(--tertiary-bright); background: rgba(20,184,166,0.13);
+  border-color: rgba(20,184,166,0.28);
+}
+.vc-phase { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+.vc-scope { font-size: 12px; color: var(--secondary); font-weight: 600; }
+.vc-org {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--text-3);
+  padding-bottom: var(--s1); border-bottom: 1px solid var(--line);
+}
+.vc-work { font-size: 13px; color: var(--text-2); line-height: 1.7; }
+
+.vc-spine {
+  margin-top: var(--s3); background: var(--surface-3);
+  border: 1px solid rgba(16,185,129,0.24); border-radius: var(--r-md);
+  padding: var(--s3); display: flex; flex-wrap: wrap;
+  gap: var(--s1) var(--s3); align-items: baseline;
+}
+.vc-spine .label-caps { color: var(--primary); flex-basis: 100%; }
+.vc-spine h3 { font-size: 17px; color: var(--primary-bright); }
+.vc-spine .note { font-size: 13px; color: var(--text-2); flex: 1 1 320px; min-width: 0; }
+
+/* ========== 요약 ========== */
+.summary { max-width: 72ch; font-size: clamp(15px, 1.8vw, 16.5px); }
+.summary p { color: var(--text-2); line-height: 1.95; }
+.summary strong { color: var(--primary-bright); }
+
+/* 한국어판 요약 — 밝은 인포그래픽 한 장. 어두운 바탕 위에 그대로 얹으면 흰 판이
+   튀므로, 테두리·라운드·그림자로 「올려둔 보드」처럼 보이게 감싼다. */
+.summary-fig { margin: 0; }
+/* 그림 자체가 사이트와 같은 다크 팔레트라 완충 처리를 두지 않는다. 다만 바탕과
+   거의 같은 색이라 경계가 사라지므로, 테두리 한 줄로 가장자리를 잡아 준다. */
+.summary-shot {
+  position: relative; display: block; overflow: hidden;
+  background: var(--surface-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-lg);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.42);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.summary-shot img {
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 2;
+}
+.summary-zoom {
+  position: absolute; right: var(--s2); bottom: var(--s2);
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; border-radius: 999px;
+  background: rgba(11, 17, 30, 0.88); border: 1px solid var(--line-active);
+  color: var(--secondary-bright); font-size: 12px; font-weight: 600;
+  opacity: 0; transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.summary-zoom svg {
+  width: 15px; height: 15px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.summary-shot:hover, .summary-shot:focus-visible {
+  border-color: var(--line-active);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.42), 0 0 0 3px rgba(6, 182, 212, 0.16);
+}
+.summary-shot:hover .summary-zoom, .summary-shot:focus-visible .summary-zoom {
+  opacity: 1; transform: translateY(0);
+}
+.summary-fig figcaption {
+  margin-top: var(--s1); font-size: 11.5px; color: var(--text-3);
+}
+.summary-fold { margin-top: var(--s2); }
+/* 손가락 입력은 hover 가 없다 — 배지를 늘 보여 준다 */
+@media (hover: none) {
+  .summary-zoom { opacity: 1; transform: none; }
+}
+
+/* ========== 핵심역량 ========== */
+.comp-grid {
+  display: grid; gap: var(--s2);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 940px) { .comp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .comp-grid { grid-template-columns: minmax(0, 1fr); } }
+.comp {
+  background: var(--surface-1); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--s3) var(--s2);
+  display: flex; flex-direction: column; gap: var(--s1); min-width: 0;
+}
+.comp-ico {
+  width: 38px; height: 38px; border-radius: var(--r-sm);
+  background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.22);
+  display: grid; place-items: center; margin-bottom: 4px;
+}
+.comp-ico svg {
+  width: 20px; height: 20px; fill: none;
+  stroke: var(--secondary-bright); stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.comp h3 { font-size: 16px; }
+.comp .body { font-size: 13.5px; color: var(--text-2); line-height: 1.75; }
+.comp .body strong { color: var(--text); }
+.comp .evidence {
+  margin-top: auto; padding-top: var(--s2); border-top: 1px solid var(--line);
+  font-size: 11.5px; color: var(--text-3); line-height: 1.65;
+}
+.comp .evidence b {
+  display: block; font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--primary); margin-bottom: 3px; font-weight: 600;
+}
+
+/* ========== 배지 ========== */
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.26);
+  color: var(--secondary-bright); border-radius: var(--r-sm);
+  padding: 3px 9px; font-size: 11.5px; font-weight: 600; white-space: nowrap;
+}
+.badge-primary {
+  background: rgba(16,185,129,0.13); border-color: rgba(16,185,129,0.3);
+  color: var(--primary-bright);
+}
+.badge-primary::before {
+  content: ""; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--primary); flex-shrink: 0;
+}
+
+/* ========== 프로젝트 카드 ========== */
+.proj-list { display: flex; flex-direction: column; gap: var(--s3); }
+.proj {
+  background: var(--surface-1); border: 1px solid var(--line);
+  border-radius: var(--r-lg); overflow: hidden; min-width: 0;
+}
+/* 카드 상단 사진 밴드. 원본 비율이 1.6:1~2.3:1 로 제각각이라 16:7 로 고정해
+   카드마다 같은 높이를 쓴다. 기본은 fit-cover — 밴드를 꽉 채우고 넘치는 만큼
+   잘라낸다. fit-contain 은 가장자리까지 다 보여야 하는 도면용이며, 남는 자리는
+   어두운 바탕으로 둔다. */
+.proj-photo {
+  margin: 0; background: var(--surface-3);
+  border-bottom: 1px solid var(--line);
+}
+.proj-photo img { display: block; width: 100%; aspect-ratio: 16 / 7; height: auto; }
+.proj-photo.fit-contain img { object-fit: contain; }
+.proj-photo.fit-cover img { object-fit: cover; }
+.proj-photo.pos-top img { object-position: 50% 30%; }
+.proj-photo figcaption {
+  padding: 9px var(--s3); font-size: 11.5px; color: var(--text-3);
+  border-top: 1px solid var(--line);
+}
+.proj-head { padding: var(--s3); border-bottom: 1px solid var(--line); }
+.proj-rail {
+  display: flex; flex-wrap: wrap; gap: var(--s1) var(--s2);
+  margin-bottom: var(--s2);
+}
+.proj-rail .kv {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  font-family: var(--mono); font-size: 10.5px;
+  letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-3);
+}
+.proj-rail .kv b {
+  font-family: var(--font); font-size: 12px; font-weight: 600;
+  letter-spacing: 0; text-transform: none; color: var(--text-2);
+}
+.proj-rail .kv.scale b { color: var(--tertiary-bright); font-variant-numeric: tabular-nums; }
+.proj h3 { font-size: clamp(17px, 2.6vw, 21px); margin-bottom: var(--s2); }
+.proj-org { font-size: 12.5px; color: var(--text-3); margin-bottom: var(--s2); }
+.proj-body { padding: var(--s3); display: flex; flex-direction: column; gap: var(--s2); }
+
+.blk { display: flex; flex-direction: column; gap: 6px; }
+.blk > .label-caps { color: var(--text-3); font-size: 10px; }
+.blk .text { font-size: 14px; color: var(--text-2); line-height: 1.8; }
+.blk .text strong { color: var(--text); }
+.blk ul { font-size: 13.5px; color: var(--text-2); line-height: 1.7; }
+.blk-situation > .label-caps { color: var(--text-3); }
+.blk-role > .label-caps { color: var(--secondary); }
+.blk-action > .label-caps { color: var(--tertiary-bright); }
+
+/* PRD §4.3 — 결과를 시각적으로 강조한다 */
+.blk-outcome {
+  background: rgba(16, 185, 129, 0.07);
+  border: 1px solid rgba(16, 185, 129, 0.26);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--r-sm);
+  padding: var(--s2);
+}
+.blk-outcome > .label-caps { color: var(--primary); }
+.blk-outcome .text { color: var(--text); font-weight: 500; }
+.blk-outcome .text strong { color: var(--primary-bright); }
+
+/* ========== 현장 에피소드 ========== */
+.epi-grid { display: grid; gap: var(--s2); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) { .epi-grid { grid-template-columns: minmax(0, 1fr); } }
+.epi {
+  background: var(--surface-3); border: 1px solid var(--line);
+  border-radius: var(--r-md); padding: var(--s3); min-width: 0;
+  display: flex; flex-direction: column; gap: var(--s1);
+}
+.epi h3 { font-size: 15.5px; }
+.epi .proj-org { margin: 0; }
+.epi .text { font-size: 13.5px; color: var(--text-2); line-height: 1.8; }
+
+/* ========== 경력 타임라인 ========== */
+.timeline { position: relative; padding-left: var(--s4); }
+.timeline::before {
+  content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px;
+  width: 1px; background: var(--line-strong);
+}
+@media (max-width: 520px) { .timeline { padding-left: var(--s3); } }
+.job { position: relative; padding-bottom: var(--s4); min-width: 0; }
+.job:last-child { padding-bottom: 0; }
+.job::before {
+  content: ""; position: absolute; left: calc(-1 * var(--s4) + 3px); top: 8px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--primary);
+}
+@media (max-width: 520px) { .job::before { left: calc(-1 * var(--s3) + 3px); } }
+.job-head { display: flex; flex-wrap: wrap; gap: 4px var(--s2); align-items: baseline; }
+.job h3 { font-size: 17px; }
+.job-period {
+  font-family: var(--mono); font-size: 11.5px; color: var(--primary);
+  font-variant-numeric: tabular-nums; letter-spacing: 0.02em;
+}
+.job-role { font-size: 13px; color: var(--text-2); margin-top: 4px; }
+.job-co {
+  font-size: 11.5px; color: var(--text-3); line-height: 1.6;
+  margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--line);
+}
+.job-body { margin-top: var(--s2); font-size: 13.5px; color: var(--text-2); line-height: 1.75; }
+.job-body strong { color: var(--text); }
+
+/* ========== 자격 · 교육 ========== */
+.cert-key {
+  display: grid; gap: var(--s2); margin-bottom: var(--s4);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 860px) { .cert-key { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .cert-key { grid-template-columns: minmax(0, 1fr); } }
+.cert-card {
+  background: var(--surface-1); border: 1px solid rgba(16,185,129,0.22);
+  border-radius: var(--r-md); padding: var(--s2);
+  display: flex; flex-direction: column; gap: 5px; min-width: 0;
+}
+.cert-card h3 { font-size: 14.5px; line-height: 1.4; }
+.cert-card .meta {
+  font-family: var(--mono); font-size: 10.5px; color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+.cert-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600; color: var(--secondary-bright);
+  margin-top: auto; padding-top: 6px;
+}
+.cert-link svg {
+  width: 13px; height: 13px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+
+details.fold {
+  background: var(--surface-3); border: 1px solid var(--line);
+  border-radius: var(--r-md); margin-bottom: var(--s2);
+}
+details.fold > summary {
+  padding: var(--s2) var(--s3); cursor: pointer; list-style: none;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--s2); font-size: 14.5px; font-weight: 600; min-height: 48px;
+}
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::after {
+  content: "+"; font-family: var(--mono); font-size: 18px;
+  color: var(--secondary); flex-shrink: 0; line-height: 1;
+}
+details.fold[open] > summary::after { content: "\2212"; }
+details.fold > summary:hover { color: var(--secondary-bright); }
+details.fold > summary .count {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  color: var(--text-3); letter-spacing: 0.04em;
+  margin-left: auto; margin-right: var(--s1);
+  font-variant-numeric: tabular-nums;
+}
+.fold-body { padding: 0 var(--s3) var(--s3); }
+
+.tbl-scroll { overflow-x: auto; }
+table.data { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 460px; }
+table.data th {
+  text-align: left; padding: var(--s1) var(--s2) var(--s1) 0;
+  border-bottom: 1px solid var(--line-strong);
+  font-family: var(--mono); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3);
+  white-space: nowrap;
+}
+table.data td {
+  padding: 10px var(--s2) 10px 0; border-bottom: 1px solid var(--line);
+  color: var(--text-2); vertical-align: top;
+}
+table.data tbody tr:nth-child(odd) td { background: rgba(19, 28, 46, 0.45); }
+table.data tbody tr:last-child td { border-bottom: 0; }
+table.data td.name { color: var(--text); font-weight: 500; }
+table.data td.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.data td.hours { color: var(--tertiary-bright); font-weight: 600; }
+
+.appx { display: flex; flex-direction: column; gap: var(--s3); }
+.appx-item { min-width: 0; }
+.appx-item h4 { font-size: 14.5px; margin-bottom: 4px; }
+.appx-item .meta {
+  font-family: var(--mono); font-size: 11px; color: var(--text-3);
+  margin-bottom: 6px; font-variant-numeric: tabular-nums;
+}
+.appx-item .text { font-size: 13.5px; color: var(--text-2); line-height: 1.75; }
+.appx-item .kv-list { font-size: 13px; color: var(--text-2); }
+.appx-item .kv-list b { color: var(--text); font-weight: 600; }
+
+/* ========== 증빙자료 갤러리 ========== */
+.ev-group + .ev-group { margin-top: var(--s5); }
+.ev-group-head {
+  display: flex; align-items: baseline; gap: var(--s2);
+  font-size: 15px; margin-bottom: var(--s2);
+  padding-bottom: var(--s1); border-bottom: 1px solid var(--line);
+}
+.ev-group-head .count {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  color: var(--text-3); letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums; margin-left: auto;
+}
+.ev-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: var(--s2);
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+}
+.ev-card { min-width: 0; }
+.ev-link {
+  display: flex; flex-direction: column; gap: 6px;
+  color: inherit; text-decoration: none; height: 100%;
+}
+.ev-link:hover { text-decoration: none; }
+
+/* 증빙 문서라 잘라내지 않는다. 세로·가로가 섞여 있어 흰 바탕에 contain 한다 */
+.ev-shot {
+  position: relative; display: block; overflow: hidden;
+  aspect-ratio: 4 / 5; background: #fff;
+  border: 1px solid var(--line-strong); border-radius: var(--r-md);
+}
+.ev-shot img {
+  width: 100%; height: 100%; object-fit: contain; display: block;
+  padding: 6px;
+}
+.ev-open {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  background: rgba(11, 17, 30, 0.82);
+  color: var(--secondary-bright); font-size: 12px; font-weight: 600;
+  opacity: 0; transition: opacity 0.15s ease;
+}
+.ev-open svg {
+  width: 15px; height: 15px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.ev-link:hover .ev-shot, .ev-link:focus-visible .ev-shot { border-color: var(--line-active); }
+.ev-link:hover .ev-open, .ev-link:focus-visible .ev-open { opacity: 1; }
+.ev-title {
+  font-size: 12.5px; font-weight: 600; color: var(--text); line-height: 1.45;
+}
+.ev-issuer {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
+  color: var(--text-3); line-height: 1.5; margin-top: auto;
+}
+@media (max-width: 420px) {
+  .ev-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+}
+
+/* ========== 연락 ========== */
+.contact {
+  background: var(--surface-3); border: 1px solid rgba(16,185,129,0.22);
+  border-radius: var(--r-lg); padding: var(--s5) var(--s4);
+  text-align: center;
+}
+@media (max-width: 600px) { .contact { padding: var(--s4) var(--s2); } }
+.contact h2 { font-size: clamp(20px, 3.4vw, 26px); margin-bottom: var(--s1); }
+.contact .lead { color: var(--text-2); font-size: 14.5px; margin-bottom: var(--s3); }
+.contact .mail {
+  display: inline-block; font-family: var(--mono);
+  font-size: clamp(14px, 2.6vw, 19px); color: var(--primary-bright);
+  letter-spacing: -0.01em; margin-bottom: var(--s3); word-break: break-all;
+}
+.contact-cta { display: flex; flex-wrap: wrap; gap: var(--s1); justify-content: center; }
+.contact .hint { margin-top: var(--s3); font-size: 11.5px; color: var(--text-3); }
+
+.site-foot {
+  border-top: 1px solid var(--line); padding-block: var(--s4);
+  font-size: 11.5px; color: var(--text-3); line-height: 1.7;
+}
+.site-foot .row {
+  display: flex; flex-wrap: wrap; gap: var(--s1) var(--s3); justify-content: space-between;
+}
+
+/* ========== 한/영 토글 (TRD ADR 2) ========== */
+html[data-lang="ko"] [data-lang-block="en"],
+html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
+
+/* ========== 인쇄 — PRD S5 · N2 ========== */
+@media print {
+  @page { size: A4; margin: 14mm 12mm; }
+  :root {
+    --bg: #fff; --surface-1: #fff; --surface-2: #fff; --surface-3: #fff;
+    --text: #000; --text-2: #1f2937; --text-3: #4b5563;
+    --primary: #047857; --primary-bright: #047857;
+    --secondary: #0e7490; --secondary-bright: #0e7490;
+    --tertiary: #0f766e; --tertiary-bright: #0f766e;
+    --line: #d1d5db; --line-strong: #9ca3af; --line-active: #9ca3af;
+  }
+  html, body { background: #fff !important; color: #000 !important; }
+  .site-head, .hero-cta, .contact-cta, .skip, .cert-link,
+  .btn, .lang-toggle, .site-nav, .contact .hint { display: none !important; }
+  .hero::before, .hero::after { display: none !important; }
+  .hero { padding-block: 0 12pt; }
+  /* 인쇄에서도 증명사진 자리는 유지한다. 장식만 걷어낸다 */
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "main photo" "cta photo";
+    gap: 6pt 14pt;
+  }
+  .hero-photo { width: 26mm; align-self: start; }
+  .hero-photo::before, .hero-photo::after { display: none !important; }
+  .hero-photo img {
+    border: 1px solid #9ca3af !important; box-shadow: none !important;
+    background: #fff !important;
+  }
+  .section { padding-block: 14pt; border-top: 1px solid #d1d5db; }
+  .wrap { max-width: none; padding-inline: 0; }
+  body { font-size: 9.5pt; line-height: 1.55; }
+  .hero h1 { font-size: 19pt; }
+  .hero h1 .accent { -webkit-text-fill-color: #047857; color: #047857; }
+  .sec-head h2 { font-size: 13pt; }
+  .metric, .vc-step, .comp, .proj, .epi, .cert-card, details.fold, .contact {
+    border: 1px solid #d1d5db !important; box-shadow: none !important;
+  }
+  .blk-outcome { background: #f0fdf4 !important; border-left: 2.5pt solid #047857 !important; }
+  /* 요약 인포그래픽 — 한 쪽을 다 먹지 않게 높이를 잡고, 접힌 본문이 뒤에 붙는다 */
+  .summary-fig { break-inside: avoid; }
+  .summary-shot {
+    box-shadow: none !important; border: 1px solid #9ca3af !important;
+  }
+  .summary-shot img {
+    aspect-ratio: auto; max-height: 100mm; width: auto; max-width: 100%;
+    margin: 0 auto;
+  }
+  .summary-zoom, .summary-fig figcaption { display: none !important; }
+
+  /* 프로젝트 사진 — 종이에서는 밴드를 낮추고 아무것도 자르지 않는다 */
+  .proj-photo { background: #fff !important; border-bottom: 1px solid #d1d5db; }
+  .proj-photo img {
+    aspect-ratio: auto; height: 30mm; object-fit: contain !important;
+  }
+  .proj-photo figcaption { border-top: 1px solid #d1d5db; color: #374151; }
+  .vc-step::after { display: none !important; }
+  .badge { background: #fff !important; border: 1px solid #9ca3af !important; color: #111 !important; }
+  /* 증빙 갤러리 — 호버 오버레이를 걷고 한 줄에 더 많이 넣는다 */
+  .ev-open { display: none !important; }
+  .ev-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 6pt; }
+  .ev-shot { border: 1px solid #9ca3af !important; }
+  .ev-card { break-inside: avoid; }
+  .ev-group-head { border-bottom: 1px solid #9ca3af; }
+
+  /* S5 — 접힌 내용까지 전부 출력한다 */
+  details.fold { break-inside: avoid; }
+  details.fold > summary { pointer-events: none; }
+  details.fold > summary::after { display: none !important; }
+  details.fold > .fold-body { display: block !important; }
+  table.data { min-width: 0; font-size: 8.5pt; }
+  .tbl-scroll { overflow: visible; }
+  .proj, .epi, .job, .comp, .metric, .vc-step, .cert-card { break-inside: avoid; }
+  .section { break-inside: auto; }
+  a { color: #0e7490 !important; text-decoration: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#top-ko" data-lang-block="ko">본문으로 건너뛰기</a><a class="skip" href="#top-en" data-lang-block="en">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <div class="brand" data-lang-block="ko"><span class="brand-line"><span class="brand-name">성하준</span><span class="brand-rom">Hajun Sung</span></span><span class="brand-role">해상풍력 · 신재생에너지 프로젝트 매니저 / 엔지니어</span></div>
+    <div class="brand" data-lang-block="en"><span class="brand-line"><span class="brand-name">Hajun Sung</span><span class="brand-rom">Hajun Sung</span></span><span class="brand-role">Offshore Wind · Renewable Energy Project Manager / Engineer</span></div>
+    <nav class="site-nav" data-lang-block="ko" aria-label="섹션 바로가기"><a href="#valuechain-ko">밸류체인</a><a href="#summary-ko">한눈에 보기</a><a href="#competency-ko">핵심역량</a><a href="#projects-ko">프로젝트</a><a href="#career-ko">경력</a><a href="#credentials-ko">자격 · 교육</a><a href="#evidence-ko">증빙자료</a></nav>
+    <nav class="site-nav" data-lang-block="en" aria-label="Section navigation"><a href="#valuechain-en">Value Chain</a><a href="#summary-en">Overview</a><a href="#competency-en">Competencies</a><a href="#projects-en">Projects</a><a href="#career-en">Career</a><a href="#credentials-en">Credentials</a><a href="#evidence-en">Evidence</a></nav>
+    <div class="head-actions"><button class="btn btn-ghost btn-head-print" type="button" data-print data-lang-block="ko"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6M7 19H5v-7h14v7h-2"/><path d="M7 15h10v6H7z"/></svg><span>PDF로 저장</span></button><button class="btn btn-ghost btn-head-print" type="button" data-print data-lang-block="en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6M7 19H5v-7h14v7h-2"/><path d="M7 15h10v6H7z"/></svg><span>Save as PDF</span></button><button class="lang-toggle" type="button" data-lang-toggle data-lang-block="ko" aria-pressed="false" aria-label="ENG"><span class="on">KR</span><span>/</span><span>ENG</span></button><button class="lang-toggle" type="button" data-lang-toggle data-lang-block="en" aria-pressed="false" aria-label="KOR"><span class="on">EN</span><span>/</span><span>KOR</span></button></div>
+  </div>
+</header>
+<main>
+  <div data-lang-block="ko">
+<section class="hero wrap" id="top-ko">
+  <div class="hero-grid">
+    <div class="hero-main">
+      <div class="hero-badge"><span class="dot"></span>
+        <span class="label-caps">OFFSHORE WIND &amp; RENEWABLE ENERGY · PROJECT MANAGER</span></div>
+      <h1>기획 · 설계 · 시공(제작) · 운영 — 전체 라이프사이클을 실무로 경험한 <span class="accent">PMP 보유 엔지니어</span></h1>
+      <p class="hero-tagline">발전사업 개발·인허가부터 육상변전소 EPCC 건설까지, 해상풍력 밸류체인을 단계별로 수행한 PMP 보유 엔지니어</p>
+      <div class="hero-meta"><span>국립목포해양대학교 기관시스템공학과 학사 (동력기계공학 복수전공)</span><span>PMP · 해기사 2급(기관사) · 설비보전기사 · 신재생에너지발전설비기사</span></div>
+    </div>
+    <figure class="hero-photo">
+      <img src="./assets/profile.webp"
+           alt="성하준 프로필 사진"
+           width="354" height="472"
+           loading="eager" decoding="async" fetchpriority="high">
+    </figure>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="mailto:effective-altruist@naver.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><span>이메일 보내기</span></a>
+      <button class="btn btn-ghost" type="button" data-print>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6M7 19H5v-7h14v7h-2"/><path d="M7 15h10v6H7z"/></svg><span>PDF로 저장</span></button>
+    </div>
+  </div>
+</section>
+<section class="section wrap" id="metrics-ko">
+  <header class="sec-head"><span class="label-caps">KEY METRICS</span><h2>핵심 지표</h2></header>
+  <div class="metrics"><div class="metric"><span class="label-caps">총 경력</span><span class="value">11년 7개월</span><span class="note">해운에서 해상풍력까지</span></div><div class="metric"><span class="label-caps">수행 회사</span><span class="value">7개사</span><span class="note">밸류체인 단계별 수행</span></div><div class="metric"><span class="label-caps">최대 프로젝트</span><span class="value">532MW</span><span class="note">안마 해상풍력 육상변전소 EPCC</span></div><div class="metric"><span class="label-caps">핵심 자격</span><span class="value">PMP +3</span><span class="note">PMP · 해기사 · 신재생 · 설비보전</span></div></div>
+</section>
+<section class="section wrap" id="valuechain-ko">
+  <header class="sec-head"><span class="label-caps">DIFFERENTIATOR</span><h2>밸류체인 커버리지</h2><p class="lead">발전사업은 단계마다 수행 주체가 바뀌고, 그 경계에서 리스크가 생깁니다. 아래 네 구간을 각각 다른 회사에서 실무로 수행했습니다.</p></header>
+  <div class="vc-flow">
+    <article class="vc-step">
+      <div class="vc-head"><span class="vc-no">01</span>
+        <h3 class="vc-phase">기획</h3></div>
+      <span class="vc-scope">사업개발 · 인허가</span>
+      <span class="vc-org">수산인더스트리 · 세광종합기술단</span>
+      <p class="vc-work">국내 발전소 입찰업무, 해외사업(바라카원전 정비사업 등) 및 사업관리 / 발전단지 검토·공유수면 점·사용료 산출, 부유식 풍황계측기 3개소 설치 인허가, 해양입지컨설팅, 공동개발협약서 작성</p>
+    </article>
+    <article class="vc-step">
+      <div class="vc-head"><span class="vc-no">02</span>
+        <h3 class="vc-phase">설계</h3></div>
+      <span class="vc-scope">엔지니어링 · 감리지원</span>
+      <span class="vc-org">세광종합기술단</span>
+      <p class="vc-work">Equinor 반딧불이 부유식 해상풍력 기술용역 — 부유체 시방서 초안, 인허가 법률 검토, 발주처 보고 영문화 및 설계문서 관리</p>
+    </article>
+    <article class="vc-step">
+      <div class="vc-head"><span class="vc-no">03</span>
+        <h3 class="vc-phase">시공(제작)</h3></div>
+      <span class="vc-scope">제작 · 해상운송 · 건설</span>
+      <span class="vc-org">파나시아 · 삼진일렉스 · HMT메가라인</span>
+      <p class="vc-work">안마 532MW 육상변전소 EPCC — HSSE Plan, HAZID(DNV), 설계문서 관리 / TP·중량물 해상운송 제안 및 Stowage·Stability 검토 / 제조업 품질부서 기술 클레임 처리</p>
+    </article>
+    <article class="vc-step">
+      <div class="vc-head"><span class="vc-no">04</span>
+        <h3 class="vc-phase">운영</h3></div>
+      <span class="vc-scope">O&amp;M · 설비정비</span>
+      <span class="vc-org">수산인더스트리 · 한진해운 · 파나시아 · DK엠텍</span>
+      <p class="vc-work">한수원 계획예방정비(OH) 참여 / 엔진·발전기·펌프·보일러 운전 및 총분해수리 실무</p>
+    </article></div>
+  <div class="vc-spine">
+    <span class="label-caps">4단계를 관통하는 축</span>
+    <h3>PMP 기반 프로젝트 관리</h3>
+    <p class="note">기획·설계·시공(제작)·운영 전 단계의 일정·리스크·문서·변경·기성고와 수행기업 간 인터페이스를 통합 관리합니다.</p>
+  </div>
+</section>
+<section class="section wrap" id="summary-ko">
+  <header class="sec-head"><span class="label-caps">OVERVIEW</span><h2>한눈에 보기</h2></header>
+  <figure class="summary-fig">
+    <a class="summary-shot" href="./assets/summary.webp"
+       target="_blank" rel="noopener">
+      <img src="./assets/summary.webp" alt="「한눈에 보는 나」 인포그래픽 — 선박 기관사, 제조사 기술클레임·해외 시운전, 발전 O&amp;M 사업관리·입찰, 해상풍력 개발 기획·설계, 중량물 해상운송, 육상 변전소 설계의 6개 경험 분야와 기획·설계·생산·시공·운송·운영 6단계 프로젝트 전 과정 경험을 정리한 도표"
+           width="2400" height="1600"
+           loading="lazy" decoding="async">
+      <span class="summary-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg>
+        <span>원본 크기로 보기</span></span>
+    </a>
+    <figcaption>클릭하면 원본 크기로 열립니다.</figcaption>
+  </figure>
+  <details class="fold summary-fold">
+    <summary><span>텍스트로 보기</span></summary>
+    <div class="fold-body"><div class="summary"><p><strong>현장에서 시작해 사업 전 과정을 연결하는 신재생에너지(해상풍력·태양광) 프로젝트 매니저</strong></p><p>선박 기관사로 기계·전기 설비를 직접 다뤄 온 현장 경험 위에, 제조사 기술클레임·해외 시운전, 발전 O&amp;M 사업관리·입찰, 관공서 수출입 계약을 거쳐 해상풍력 기획·설계, 중량물 해상운송, 육상변전소 설계까지 경력을 넓혀 왔습니다. <strong>기획부터 운영까지 프로젝트 전 단계를 실무로 경험</strong>한 만큼, <strong>각 단계의 언어를 이해하고 서로 연결하는 것</strong>이 저의 강점입니다.</p><p>스스로를 <strong>&#x27;공부하는 시민&#x27;</strong>이라 소개합니다. 일하는 모든 현장을 배움의 장으로 삼아, 어렵고 힘든 공부와 노동을 함께 해내겠다는 다짐입니다.</p></div></div>
+  </details>
+</section>
+<section class="section wrap" id="competency-ko">
+  <header class="sec-head"><span class="label-caps">CAPABILITIES</span><h2>핵심역량</h2></header>
+  <div class="comp-grid">
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18M3 12h12M3 19h7"/><circle cx="19" cy="12" r="2"/><circle cx="14" cy="19" r="2"/></svg></span>
+      <h3>프로젝트 관리</h3>
+      <div class="body"><p>현장–본사–발주처 사이의 이해관계를 조정하고, 기본설계·실시설계 단계의 문서 체계와 공정을 관리했습니다. 변경계약(Change Order)과 기성고 관리 경험을 보유합니다.</p></div>
+      <p class="evidence"><b>근거</b>PMP (PMI, 2022.09) / 프로젝트관리 NCS 초·중급 34h / 경영기획 NCS 17h / MS Project</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2"/><path d="M12 10V3M13.7 13l6 3.5M10.3 13l-6 3.5"/></svg></span>
+      <h3>해상풍력 사업개발 · 인허가</h3>
+      <div class="body"><p>부유식 해상풍력 사업의 인허가 서류를 직접 작성했습니다. 과업지시서, 원·하도급 계약서, 공유수면 점·사용 신청서, 공동개발협약서가 여기에 포함됩니다.</p></div>
+      <p class="evidence"><b>근거</b>공유수면 점사용료 산출 / 풍황계측기 설치 인허가 / 해양입지컨설팅 / WindPro · QGIS</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <h3>HSE · 리스크 관리</h3>
+      <div class="body"><p><strong>532MW</strong> 안마 해상풍력 육상변전소 EPCC의 HSSE Plan을 작성했습니다. HAZID 용역은 <strong>DNV</strong>와 계약하고 수행 과정을 관리했습니다.</p></div>
+      <p class="evidence"><b>근거</b>HSSE Plan 수립 / HAZID 용역계약 및 관리 (DNV) / OPITO Basic Offshore Safety 24h</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h9l5 5v13H5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+      <h3>계약 · 입찰 · 견적</h3>
+      <div class="body"><p>발전소 정비용역 입찰서류(사전입찰·적격심사)를 작성했습니다. 해외 EPC 발주처의 RFP/RFQ를 검토하고 Voyage·Time Charter 견적서와 제안서를 작성했습니다.</p></div>
+      <p class="evidence"><b>근거</b>무역영어 1급 / 수출입관리·무역실무 NCS 18h / 원가관리회계 19h</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span>
+      <h3>설비 엔지니어링</h3>
+      <div class="body"><p>엔진, 발전기, 펌프(기어·원심·피스톤), 압축기, 모터, 청정기, 보일러, 유압기계 및 밸브를 직접 운전·정비했습니다. 도면과 매뉴얼을 읽고 공급자와 기술 논의가 가능합니다.</p></div>
+      <p class="evidence"><b>근거</b>해기사 2급(기관사) / 설비보전기사 / 신재생에너지발전설비기사 / 원자력발전계통교육 77h</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg></span>
+      <h3>해외 현장 · 영문 실무</h3>
+      <div class="body"><p><strong>Equinor, DNV, Lamprell, Technip, Saipem</strong> 등 해외 발주처·선급과 영문 문서로 실무를 진행했습니다. 시방서, 감리 실적보고서, RFQ, 제안서를 영문화했고, 유럽·미주·중동·아시아·아프리카 시운전·기술 클레임 현장에 직접 나가 문제를 처리했습니다.</p></div>
+      <p class="evidence"><b>근거</b>해외 A/S·시운전 출장 (1년 약 80회 비행) / ITT 비즈니스영어번역 2급 / 캐나다 어학연수 1년 (ILAC/KGIBC)</p>
+    </article></div>
+</section>
+<section class="section wrap" id="projects-ko">
+  <header class="sec-head"><span class="label-caps">DEPTH</span><h2>대표 프로젝트</h2></header>
+  <div class="proj-list">
+    <article class="proj">
+      <figure class="proj-photo fit-cover">
+        <img src="./assets/projects/ulsan-ecogreen.webp"
+             alt="울산 앞바다 위성 지도에 풍황계측기 설치 지점이 표시돼 있다"
+             width="1280" height="692"
+             loading="lazy" decoding="async">
+        <figcaption>부유식 풍황계측기 설치 해역 위치도</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">단계 <b>개발 (인허가)</b></span><span class="kv">기간 <b>2023 ~ 2024</b></span><span class="kv scale">규모 <b>3개소</b></span></div>
+        <h3>울산 에코그린 해상풍력 — 부유식 풍황계측기 3개소 인허가</h3>
+        <p class="proj-org">(주)세광종합기술단 · 에너지개발사업부 · 과장</p>
+        <div class="badges"><span class="badge badge-primary">해상풍력</span><span class="badge">인허가</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">상황</span><div class="text"><p>해상풍력 발전사업 허가에는 풍황자원 계측이 선행되어야 합니다. 부유식 풍황계측기 <strong>3개소</strong>를 설치해야 했고, 지점마다 공유수면 점·사용 허가가 필요했습니다.</p></div></div><div class="blk blk-role"><span class="label-caps">역할</span><div class="text"><p>인허가 용역의 문서 전반(과업 정의부터 하도급 계약까지)을 작성했습니다.</p></div></div><div class="blk blk-action"><span class="label-caps">수행</span><div class="text"><ul><li>과업지시서 작성</li><li>원도급 계약서 및 하도급 계약서 작성</li><li>풍황계측기 공유수면 점·사용 신청서 작성</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">결과</span><div class="text"><p>풍황계측기 3곳의 설치 인허가에 필요한 모든 문서를 작성하고 제출하여 용역을 차질 없이 마쳤습니다.</p></div></div></div>
+    </article>
+    <article class="proj">
+      <figure class="proj-photo fit-cover">
+        <img src="./assets/projects/equinor-firefly.webp"
+             alt="사업대상지와 해상·육상 케이블 경과지, 해군훈련구역이 표시된 울산 앞바다 해도"
+             width="1018" height="639"
+             loading="lazy" decoding="async">
+        <figcaption>울산 앞바다 사업대상지 및 해저케이블 경과지 해도</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">단계 <b>개발 · 설계</b></span><span class="kv">기간 <b>2023.07 ~ 2024.05</b></span><span class="kv">발주처 <b>Equinor</b></span></div>
+        <h3>에퀴노르 반딧불이 부유식 해상풍력 — 기술용역</h3>
+        <p class="proj-org">(주)세광종합기술단 · 에너지개발사업부 · 과장</p>
+        <div class="badges"><span class="badge badge-primary">해상풍력</span><span class="badge">설계</span><span class="badge">인허가</span><span class="badge">해외발주처</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">상황</span><div class="text"><p>노르웨이 <strong>Equinor</strong>가 추진하는 반딧불이 부유식 해상풍력 사업의 Windfarm Offshore Area 기술용역입니다. 발주처가 외국계여서 모든 산출물에 국문 법령 검토와 영문 보고가 동시에 필요했습니다.</p></div></div><div class="blk blk-role"><span class="label-caps">역할</span><div class="text"><p>부유체 관련 기술 문서 작성과 인허가 법률 검토, 공유수면 관련 비용 산출, 발주처 보고 영문화를 담당했습니다.</p></div></div><div class="blk blk-action"><span class="label-caps">수행</span><div class="text"><ul><li>부유체(Floating Substructure) 시방서 초안 작성</li><li>인허가 관련 법률 검토 및 발주처 지원</li><li>공유수면 점·사용료 산출</li><li>산출 자료, 감리 실적보고서 등 발주처 제출 문서 영문화</li><li>주간 공정 보고</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">결과</span><div class="text"><p>공유수면 점·사용 신청과 점·사용료 산출, 인허가 법률 검토, 해양입지컨설팅을 주도해 사업 초기의 행정적·법률적 불확실성을 완화했습니다. 발주처 제출 문서를 영문화하고 기술·계약 문서를 정비해 글로벌 디벨로퍼와의 사업 협상을 지원했습니다.</p></div></div></div>
+    </article>
+    <article class="proj">
+      <figure class="proj-photo fit-cover">
+        <img src="./assets/projects/htv-chartering.webp"
+             alt="안벽에 접안한 중량물 운반선에 대형 해양 구조물을 싣는 모습"
+             width="1280" height="853"
+             loading="lazy" decoding="async">
+        <figcaption>자항식 중량물 운반선(HTV) 적재 작업</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">단계 <b>운송 · 물류</b></span><span class="kv">기간 <b>2024.06 ~ 2024.11</b></span></div>
+        <h3>중량물 운반선(HTV) Chartering — 해외 EPC 프로젝트 제안·견적</h3>
+        <p class="proj-org">(주)에이치엠티메가라인 · 영업본부 · 과장</p>
+        <div class="badges"><span class="badge badge-primary">해상풍력</span><span class="badge">해운·운송</span><span class="badge">입찰·제안</span><span class="badge">해외발주처</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">상황</span><div class="text"><p>해외 EPC사의 FLNG 모듈·해상풍력 변전소·Transition Piece 등 대형 구조물은 자항식 중량물 운반선으로만 운송할 수 있습니다. 화물마다 중량·형상과 운송 조건이 달라, 입찰 단계부터 적재계획과 복원성을 검토해 프로젝트별 최적의 운송 방안을 제시해야 했습니다.</p></div></div><div class="blk blk-role"><span class="label-caps">역할</span><div class="text"><p>자항식 중량물 운반선 용선 영업과 사업개발을 맡아, 발주처 RFP/RFQ 검토부터 제안서·견적서 작성, 입찰·제안·수주와 계약 변경 관리까지 담당했습니다.</p></div></div><div class="blk blk-action"><span class="label-caps">수행</span><div class="text"><ul><li>제안서 작성 — Samsung Heavy Industries「Cedar LNG FLNG」, Technip Energies「ODUM Petrochemical」, Lamprell「Norfolk &amp; Southcoast TP 운송」, Lamprell「OW Southcoast TP 운송」</li><li>Voyage Charter / Time Charter 견적서 작성 — Lamprell, SHI, STX, DHL, PTSC, SKPO, Saipem, Technip, Kuehne+Nagel, DEME, Heerema, MCSI 등</li><li>GTPP Project(DL E&amp;C) 변경계약 및 Change Order 처리, 기성고 관리</li><li>Technical material 관리 — Stowage Plan, Vessel Stability, Grillage</li><li>견적 리스트(선표) 관리, 회사 소개서 작성 및 영문화</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">결과</span><div class="text"><p>해상풍력 TP 운송을 포함한 해외 EPC 프로젝트 제안·견적을 수행했습니다. 해상풍력 설비의 운송·설치 제약 조건을 실무로 파악했습니다.</p></div></div></div>
+    </article>
+    <article class="proj">
+      <figure class="proj-photo fit-cover">
+        <img src="./assets/projects/anma-substation.webp"
+             alt="안마도와 영광 사이 거리가 표시된 해상풍력단지 위치도"
+             width="974" height="418"
+             loading="lazy" decoding="async">
+        <figcaption>전남 영광 안마 해상풍력단지 위치도</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">단계 <b>건설 (EPCC)</b></span><span class="kv">기간 <b>2025.02 ~ 2025.11</b></span><span class="kv scale">규모 <b>532MW</b></span></div>
+        <h3>안마 해상풍력 육상변전소 EPCC</h3>
+        <p class="proj-org">(주)삼진일렉스 · 송변전사업본부 · 과장</p>
+        <div class="badges"><span class="badge badge-primary">해상풍력</span><span class="badge">건설·EPC</span><span class="badge">설계</span><span class="badge">HSE</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">상황</span><div class="text"><p>전남 영광 안마 해상풍력단지(<strong>532MW</strong>)의 계통 연계용 육상변전소 EPCC 프로젝트입니다. 기본설계에서 실시설계로 넘어가는 구간이었습니다. 설계 산출물이 동시에 발생하는 반면, HSE 체계는 아직 수립 전이었습니다.</p></div></div><div class="blk blk-role"><span class="label-caps">역할</span><div class="text"><p>송변전사업본부 소속으로 설계 문서 관리와 HSE 체계 수립, 리스크 검토 용역 발주를 담당했습니다.</p></div></div><div class="blk blk-action"><span class="label-caps">수행</span><div class="text"><ul><li>기본설계·실시설계 단계의 도서 접수·검토·발행 이력을 관리하는 문서 체계 운영</li><li>프로젝트 HSSE(Health, Safety, Security and Environment) Plan 작성</li><li>HAZID(Hazard Identification and Hazard Assessment) 용역을 DNV와 계약하고 수행 과정을 관리</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">결과</span><div class="text"><p>발주처 제출용 HSSE Plan을 수립·관리하고, <strong>DNV</strong> HAZID 기술용역의 발주부터 수행 및 결과물 검토까지 전 과정을 관리했습니다. 또한 설계 변경이 빈번한 분야의 문서 이력과 변경사항을 체계적으로 추적·관리하는 문서관리체계를 운영했습니다.</p></div></div></div>
+    </article>
+    <article class="proj">
+      <figure class="proj-photo fit-cover pos-top">
+        <img src="./assets/projects/barakah-npp.webp"
+             alt="바라카 원전의 원자로 격납건물 두 기가 보이는 전경"
+             width="960" height="564"
+             loading="lazy" decoding="async">
+        <figcaption>UAE 바라카 원전 전경</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">단계 <b>O&amp;M 입찰 · 해외사업</b></span><span class="kv">기간 <b>2016.12 ~ 2019.03</b></span></div>
+        <h3>UAE 바라카 원전 1호기 경상정비 경쟁입찰</h3>
+        <p class="proj-org">(주)수산인더스트리 · 사업관리/신성장사업/해외사업팀 (겸임)</p>
+        <div class="badges"><span class="badge badge-primary">입찰·제안</span><span class="badge">해외발주처</span><span class="badge">발전·원자력</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">상황</span><div class="text"><p>국내 발전정비 업계가 처음으로 UAE 바라카 원전 1호기 경상정비 경쟁입찰에 참여하는 건이었습니다. 회사로서도 첫 해외사업이라 참고할 선례가 없는 상태에서 입찰 체계를 처음부터 만들어야 했습니다.</p></div></div><div class="blk blk-role"><span class="label-caps">역할</span><div class="text"><p>사업관리·신성장사업·해외사업팀을 겸임하며 입찰 문서와 해외 파트너십 업무를 담당했습니다.</p></div></div><div class="blk blk-action"><span class="label-caps">수행</span><div class="text"><ul><li>발전소 정비용역 입찰서류 작성 (사전입찰서류, 적격심사 서류)</li><li>엔지니어협회 등록 서류 작성</li><li>회사 홍보자료 제작 및 발주처 프레젠테이션</li><li>Joint Venture 및 종속회사 업무 지원</li><li>한국전력 사우디 로드쇼 참가</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">결과</span><div class="text"><p>바라카 원전 정비사업 경쟁입찰 참여를 지원하고 사우디 현지 기업 2곳과 MOU를 체결하며 해외사업개발 및 파트너십 구축 경험을 쌓았습니다. 대규모 해외 프로젝트를 수행하며 전문인력 확보와 효과적인 리스크 분담의 중요성을 체감했고, 이를 계기로 프로젝트 관리 역량을 강화하여 <strong>PMP</strong> 자격을 취득했습니다.</p></div></div></div>
+    </article></div>
+  <header class="sec-head" style="margin-top:var(--s5)">
+    <span class="label-caps">FIELD</span><h2>현장 에피소드</h2></header>
+  <div class="epi-grid">
+    <article class="epi">
+      <h3>인도양 항해 중 선수부 침수 복구</h3>
+      <p class="proj-org">(주)한진해운 · 2등 기관사</p>
+      <div class="badges"><span class="badge">설비정비</span><span class="badge">문제해결</span></div>
+      <div class="text"><p>인도양 항해 중 선박 선수부가 침수되어 해당 구역의 장비 다수가 해수에 잠겼습니다. 포기하면 운항 일정이 지연되고 침수 장비는 전량 폐기해야 하는 상황이었습니다.</p><p>장비 매뉴얼을 처음부터 다시 학습하고, 회사 지침에 따른 복구 절차를 2개월간 수행했습니다. 침수 장비를 모두 정상 가동 상태로 되돌렸고, 선박은 예정된 일정대로 운항했습니다. 이 건에 대한 사내 평가로 회사 발주 신조선 인수 멤버에 선발되었습니다.</p></div>
+    </article>
+    <article class="epi">
+      <h3>한진인디고호 신조선 인수</h3>
+      <p class="proj-org">(주)한진해운 · 2등 기관사</p>
+      <div class="badges"><span class="badge">신조선</span><span class="badge">시운전</span><span class="badge">조선</span></div>
+      <div class="text"><p>한진해운이 발주하고 삼성중공업이 건조한 컨테이너선 한진인디고호(<strong>45,169GRT</strong>)의 신조선 인수 멤버로 참여했습니다. 조선소에서 기관 설비의 설치·시운전·인수 검사를 직접 확인했습니다. 설계 도면이 실제 설비로 구현되는 전 과정을 경험했습니다.</p></div>
+    </article></div>
+</section>
+<section class="section wrap" id="career-ko">
+  <header class="sec-head"><span class="label-caps">CONTINUITY</span><h2>경력</h2></header>
+  <div class="timeline">
+    <article class="job">
+      <div class="job-head"><h3>(주)삼진일렉스</h3>
+        <span class="job-period">2025.02 ~ 2025.11 <span class="num">(9개월)</span></span></div>
+      <p class="job-role">송변전사업본부 · 과장 · 해상풍력</p>
+      <p class="job-co">매출 1,800억원 / 임직원 150명 / 전기·정보통신·소방설비·EMP 방호 전문건설 · <a href="http://www.samjinelex.com/" target="_blank" rel="noopener">http://www.samjinelex.com/</a></p>
+      <div class="job-body"><p><strong>안마 해상풍력(532MW)</strong> 육상변전소 EPCC 프로젝트에서 설계문서 관리와 HSE 체계 수립을 맡았습니다.</p><ul><li>기본설계·실시설계 문서 관리</li><li>HSSE(Health, Safety, Security and Environment) Plan 작성</li><li>HAZID(Hazard Identification and Hazard Assessment) 용역계약 및 관리 (DNV)</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>(주)에이치엠티메가라인</h3>
+        <span class="job-period">2024.06 ~ 2024.11 <span class="num">(5개월)</span></span></div>
+      <p class="job-role">영업본부 (Chartering &amp; Customer Relationship Division) · 과장 (Manager) · 해운·물류</p>
+      <p class="job-co">KCTC 자회사 / 매출 약 250억원 / 임직원 약 12명 / 중량화물 운반 전문 해운선사 · <a href="https://www.hi-megaline.com/" target="_blank" rel="noopener">https://www.hi-megaline.com/</a></p>
+      <div class="job-body"><p>중량물 운반선(HTV) 용선 영업을 맡아 해외 EPC 발주처 제안·견적과 변경계약을 처리했습니다.</p><ul><li>발주처 RFP/RFQ 검토 및 제안서 작성 (Samsung Heavy Industries, Technip Energies, Lamprell 등)</li><li>Voyage Charter / Time Charter 견적서 작성 — Lamprell, SHI, STX, DHL, PTSC, SKPO, Saipem, Technip, Kuehne+Nagel, DEME, Heerema 등</li><li>GTPP Project(DL E&amp;C) 변경계약 업무, 기성고 관리</li><li>Technical material 관리 (Stowage Plan, Vessel Stability, Grillage 등), 회사 소개서 영문화</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>(주)세광종합기술단</h3>
+        <span class="job-period">2023.07 ~ 2024.05 <span class="num">(10개월)</span></span></div>
+      <p class="job-role">에너지개발사업부 · 과장 · 해상풍력</p>
+      <p class="job-co">매출 약 700억원 / 임직원 약 250명 / 항만 전문 엔지니어링 · <a href="http://www.sekwangeng.co.kr/new/" target="_blank" rel="noopener">http://www.sekwangeng.co.kr/new/</a></p>
+      <div class="job-body"><p>해상풍력 발전사업의 개발·인허가 문서와 설계 지원 산출물을 작성했습니다.</p><ul><li>에퀴노르 반딧불이 부유식 해상풍력 기술용역 — 부유체 시방서 초안, 주간 공정보고, 인허가 법률 검토, 공유수면 점사용료 산출, 문서 영문화</li><li>울산 에코그린 해상풍력 부유식 풍황계측기 3개소 설치 인허가 용역 — 과업지시서·계약서·하도급 계약서·공유수면 점사용 신청서 작성</li><li>SK E&amp;S 강릉 해상풍력 발전사업 — 견적서 및 공동개발협약서 작성</li><li>WindPro 도입 및 풍황자원 분석 세미나 진행, 해양입지컨설팅</li><li>르노바 / 여수 삼산초도 해상풍력 RFQ·SOW·제안서 영문 번역 및 검토</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>(주)DK엠텍 (前 동강엠텍)</h3>
+        <span class="job-period">2019.05 ~ 2022.06 <span class="num">(38개월)</span></span></div>
+      <p class="job-role">고객지원팀 · 전임팀장 · 해양장비</p>
+      <p class="job-co">매출 약 300억원 / 임직원 약 44명 / B2G 해양장비 납품·시운전·정비 · <a href="https://dkmtech.com/" target="_blank" rel="noopener">https://dkmtech.com/</a></p>
+      <div class="job-body"><p>해경·해군 등 관공서 납품 해양장비의 기술지원과 원제작사 대응을 담당했습니다.</p><ul><li>클레임 관리 — 외국 원제작사 기술 논의, Complaint Report 작성, 처리 비용 Invoice 발행</li><li>사후서비스 엔지니어 업무 — 시운전, 총분해수리</li><li>견적서 작성 및 해외 구매 오더 발행, 납품장비 수리견적 산출</li><li>절차서·매뉴얼 작성, 원제작사 매뉴얼 및 대리점 서류 번역</li><li>품질인증 및 CS 인증 서류 업무</li><li>국책과제 「AI와 e-Navigation 기반 차세대 글로벌 3D 해상교통관제 시스템 개발」 참여</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>(주)수산인더스트리</h3>
+        <span class="job-period">2016.12 ~ 2019.03 <span class="num">(27개월)</span></span></div>
+      <p class="job-role">사업관리팀 · 신성장사업팀 · 해외사업팀 (겸임) · 사원 · 발전·플랜트</p>
+      <p class="job-co">매출 약 2,638억원 / 임직원 약 1,316명 / 발전소·플랜트 전기공사 및 설비보수 · <a href="https://www.soosanind.co.kr/" target="_blank" rel="noopener">https://www.soosanind.co.kr/</a></p>
+      <div class="job-body"><p>원자력·화력·신재생 O&amp;M 사업의 국내외 입찰서류를 작성하고, 해외사업 개척을 지원했습니다.</p><ul><li>UAE 바라카 원전 1호기 경상정비 최초 경쟁입찰 참여</li><li>발전소 정비용역 입찰서류 작성 (사전입찰서류, 적격심사)</li><li>엔지니어협회 등록 서류 작성</li><li>회사 홍보자료 작성 및 발주처 프레젠테이션</li><li>Joint Venture 및 종속회사 업무 지원</li><li>한전 사우디 로드쇼 참가, 사우디 현지 업체 2곳과 MOU 체결</li><li>베트남 태양광사업 참여 (용량 70MW / 총사업비 USD 81,000,000)</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>(주)파나시아</h3>
+        <span class="job-period">2015.04 ~ 2015.12 <span class="num">(9개월)</span></span></div>
+      <p class="job-role">품질경영본부 · 계장 · 조선기자재</p>
+      <p class="job-co">매출 약 3,558억원 / 임직원 약 284명 / 선박 구성부품 및 환경저감장치 제조 · <a href="https://www.worldpanasia.com/" target="_blank" rel="noopener">https://www.worldpanasia.com/</a></p>
+      <div class="job-body"><p>선박 구성부품·환경저감장치의 국내외 기술 클레임을 처리하고 A/S 출장을 수행했습니다.</p><ul><li>국내외 After Service (호주·중국·중동·유럽·미국 등, 1년간 약 80회 비행)</li><li>클레임 접수·처리 및 관리</li><li>국내외 고객 대상 제품 사용 및 정비 교육</li><li>Trouble Shooting 문서, 제품 매뉴얼, 홍보자료 작성 (국·영문)</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>(주)한진해운</h3>
+        <span class="job-period">2010.04 ~ 2013.08 <span class="num">(41개월)</span></span></div>
+      <p class="job-role">컨테이너 선대팀 · 2등 기관사 · 해운·물류</p>
+      <p class="job-co">매출 약 9조 7,000억원 / 임직원 약 1,400명 / 국내 최대 해운기업</p>
+      <div class="job-body"><p>풀컨테이너선 기관사관으로 승선하며 기계·전기 설비 전반을 운전·정비했습니다.</p><ul><li>압축기, 모터, 발전기, 펌프(기어·원심·피스톤), 청정기, 레벨게이지, 냉동컨테이너, 전기설비 유지보수</li><li>유압기계 및 밸브 정비, 보일러 관리·운전·정비</li><li>연료유·윤활유 소모량 산출 및 재고 관리, 기계 Spare 관리</li><li>신조선 인수 참여 — 한진인디고호(45,169GRT), 삼성중공업 건조</li><li>클레임 관리 및 처리</li></ul></div>
+    </article></div>
+</section>
+<section class="section wrap" id="credentials-ko">
+  <header class="sec-head"><span class="label-caps">VERIFIABLE</span><h2>자격 · 교육</h2></header>
+  <div class="cert-key">
+    <article class="cert-card">
+      <h3>PMP (Project Management Professional)</h3>
+      <span class="meta">PMI · 2022.09.15</span>
+      
+    </article>
+    <article class="cert-card">
+      <h3>설비보전기사</h3>
+      <span class="meta">한국산업인력공단 · 2024.06.18</span>
+      
+    </article>
+    <article class="cert-card">
+      <h3>신재생에너지발전설비기사 (태양광)</h3>
+      <span class="meta">한국산업인력공단 · 2023.06.09</span>
+      
+    </article>
+    <article class="cert-card">
+      <h3>해기사 2급 (기관사)</h3>
+      <span class="meta">한국해양수산연수원 · 2012.11.19</span>
+      
+    </article></div>
+  <details class="fold">
+    <summary><span>자격증 전체</span>
+      <span class="count">8건</span></summary>
+    <div class="fold-body"><div class="tbl-scroll"><table class="data">
+      <thead><tr><th>명칭</th><th>발급기관</th>
+        <th>취득일</th></tr></thead>
+      <tbody><tr><td class="name">PMP (Project Management Professional)</td><td>PMI</td><td class="n">2022.09.15</td></tr><tr><td class="name">설비보전기사</td><td>한국산업인력공단</td><td class="n">2024.06.18</td></tr><tr><td class="name">신재생에너지발전설비기사 (태양광)</td><td>한국산업인력공단</td><td class="n">2023.06.09</td></tr><tr><td class="name">해기사 2급 (기관사)</td><td>한국해양수산연수원</td><td class="n">2012.11.19</td></tr><tr><td class="name">무역영어 1급</td><td>대한상공회의소</td><td class="n">2021.10.06</td></tr><tr><td class="name">컴퓨터활용능력 1급</td><td>대한상공회의소</td><td class="n">2016.04.22</td></tr><tr><td class="name">ITT 비즈니스영어번역 2급</td><td>국제통역번역협회</td><td class="n">2014.08.05</td></tr><tr><td class="name">한국사능력검정시험 1급</td><td>국사편찬위원회</td><td class="n">2016.02.11</td></tr></tbody></table></div></div>
+  </details>
+  <details class="fold">
+    <summary><span>교육 이수 전체</span>
+      <span class="count">14건 · 총 329시간</span></summary>
+    <div class="fold-body"><div class="tbl-scroll"><table class="data">
+      <thead><tr><th>명칭</th><th>발급기관</th>
+        <th>취득일</th><th>시간</th>
+        <th>분야</th></tr></thead>
+      <tbody><tr><td class="name">원자력발전계통교육</td><td>한국폴리텍Ⅲ대학</td><td class="n">2017.06.19 ~ 2017.06.30</td><td class="n hours">77</td><td>발전</td></tr><tr><td class="name">[재경관리사] 재무회계 기본이론</td><td>휴넷</td><td class="n">2021.11</td><td class="n hours">36</td><td>회계</td></tr><tr><td class="name">Basic Offshore Safety Induction &amp; Emergency Training (OPITO)</td><td>COENS</td><td class="n">2015.05.11 ~ 2015.05.13</td><td class="n hours">24</td><td>안전</td></tr><tr><td class="name">RT-flex 전자엔진 고등과정</td><td>Wärtsilä Land &amp; Sea Academy</td><td class="n">2012.11.14 ~ 2012.11.16</td><td class="n hours">24</td><td>설비</td></tr><tr><td class="name">냉동컨테이너 진단 및 수리</td><td>한진해운 운항훈련원</td><td class="n">2010.02.03 ~ 2010.02.05</td><td class="n hours">24</td><td>설비</td></tr><tr><td class="name">[재경관리사] 원가관리회계 기본이론</td><td>휴넷</td><td class="n">2021.10</td><td class="n hours">19</td><td>회계</td></tr><tr><td class="name">수출입관리 및 무역실무 (NCS 02040302)</td><td>휴넷</td><td class="n">2019.10</td><td class="n hours">18</td><td>무역</td></tr><tr><td class="name">프로젝트관리 (NCS 01010102)</td><td>휴넷</td><td class="n">2021.10</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">프로젝트관리 중급 (NCS 01010102)</td><td>휴넷</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">경영기획 (NCS 02010101)</td><td>휴넷</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">동력배선 (NCS, HRD-Net)</td><td>한국폴리텍대학 동부산캠퍼스</td><td class="n">2010.01.11 ~ 2010.01.12</td><td class="n hours">16</td><td>설비</td></tr><tr><td class="name">기관실 자동화 시스템 운용 시뮬레이션</td><td>한진해운 운항훈련원</td><td class="n">2010.04.01 ~ 2010.04.10</td><td class="n hours">16</td><td>설비</td></tr><tr><td class="name">할랄과 중동시장 비즈니스 실무</td><td>한국무역협회</td><td class="n">-</td><td class="n hours">16</td><td>무역</td></tr><tr><td class="name">현장 CS 대응방법 (NCS 02010302)</td><td>휴넷</td><td class="n">2020.02.24 ~ 2020.03.24</td><td class="n hours">8</td><td>CS</td></tr></tbody></table></div></div>
+  </details>
+  
+  <details class="fold">
+    <summary><span>학력 · 어학 · 기타</span></summary>
+    <div class="fold-body"><div class="appx"><div class="appx-item"><h4 class="label-caps" style="font-size:11px;color:var(--secondary)">어학 · 해외경험</h4></div><div class="appx-item"><h4>캐나다 어학연수</h4><p class="meta">2013.10 ~ 2014.11 · ILAC / KGIBC</p><div class="text"><p>ILAC에서 ESL·비즈니스영어 과정을, KGIBC에서 통·번역 과정을 이수했습니다.</p></div></div><div class="appx-item"><h4>해외 출장 · 승선</h4><p class="meta">2010 ~ 2019</p><div class="text"><p>풀컨테이너선 기관사관으로 5대양 6대주를 항해했습니다. 파나시아 재직 중에는 유럽·미국·중국·호주·동남아·남아프리카로 A/S 및 기술 클레임 출장을 수행했습니다. 수산인더스트리 재직 중에는 UAE·사우디·말레이시아·베트남 태양광 해외사업에 참여했습니다.</p></div></div><div class="appx-item"><h4 class="label-caps" style="font-size:11px;color:var(--secondary)">학력</h4></div><div class="appx-item"><h4>국립목포해양대학교 해사대학</h4><p class="meta">2006.03 ~ 2010.02 · 전공 기관시스템공학과 (동력기계공학 복수전공)</p><p class="text">학사 졸업 / 학점 3.81 / 4.5</p></div><div class="appx-item"><h4>공주고등학교</h4><p class="meta">2003.03 ~ 2006.02</p><p class="text">졸업</p></div><div class="appx-item"><h4 class="label-caps" style="font-size:11px;color:var(--secondary)">기타</h4></div><div class="appx-item"><h4>연구 실적</h4><p class="text">국가연구자번호 비공개</p><div class="text"><p>「AI와 e-Navigation 기반의 차세대 글로벌 3D 해상교통관제 시스템 개발」 국가 R&amp;D 과제(2019.10 ~ 2022.03 · 정부연구비 215백만원 · (주)DK엠텍)에 참여연구원(참여율 <strong>74%</strong>)으로 2개 연차 참여했습니다. 국가과학기술지식정보서비스(NTIS) 등재 실적입니다.</p><ul><li>1차연도 2019.10 ~ 2020.09 — 정부연구비 100백만원 / 매칭펀드 10.4백만원</li><li>2차연도 2021.01 ~ 2022.03 — 정부연구비 115백만원 / 매칭펀드 2.9백만원</li></ul></div></div><div class="appx-item"><h4>활용 도구</h4><p class="kv-list"><b>능숙</b> 한글(HWP), MS Word, MS Excel, MS PowerPoint</p><p class="kv-list"><b>활용</b> MS Project, QGIS, WindPro, AutoCAD, PDF 편집</p></div><div class="appx-item"><h4>병역</h4><p class="text">해군 수송병과 / 2010.02.02 ~ 2013.05.11 / 승선근무예비역 복무 만료</p></div><div class="appx-item"><h4>유공장(감사패)</h4><p class="text">대한산업보건협회 한마음혈액원장 / 2023.12.30</p></div></div></div>
+  </details>
+</section>
+<section class="section wrap" id="evidence-ko">
+  <header class="sec-head"><span class="label-caps">DOCUMENTS</span><h2>증빙자료</h2><p class="lead">자격증과 교육이수증 사본입니다. 썸네일을 누르면 원본이 새 탭에서 열립니다.</p></header>
+  
+    <div class="ev-group">
+      <h3 class="ev-group-head"><span>자격증</span>
+        <span class="count">8건</span></h3>
+      <ul class="ev-grid">
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/pmp.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/pmp.webp"
+                 alt="PMP (Project Management Professional) 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">PMP (Project Management Professional)</span>
+          <span class="ev-issuer">PMI</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/maintenance-engineer.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/maintenance-engineer.webp"
+                 alt="설비보전기사 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">설비보전기사</span>
+          <span class="ev-issuer">한국산업인력공단</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/renewable-engineer.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/renewable-engineer.webp"
+                 alt="신재생에너지발전설비기사 (태양광) 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">신재생에너지발전설비기사 (태양광)</span>
+          <span class="ev-issuer">한국산업인력공단</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/marine-engineer-2.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/marine-engineer-2.webp"
+                 alt="해기사 2급 (기관사) 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">해기사 2급 (기관사)</span>
+          <span class="ev-issuer">한국해양수산연수원</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/trade-english-1.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/trade-english-1.webp"
+                 alt="무역영어 1급 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">무역영어 1급</span>
+          <span class="ev-issuer">대한상공회의소</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/computer-specialist-1.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/computer-specialist-1.webp"
+                 alt="컴퓨터활용능력 1급 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">컴퓨터활용능력 1급</span>
+          <span class="ev-issuer">대한상공회의소</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/itt-translation-2.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/itt-translation-2.webp"
+                 alt="ITT 비즈니스영어번역 2급 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">ITT 비즈니스영어번역 2급</span>
+          <span class="ev-issuer">국제통역번역협회</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/korean-history-1.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/korean-history-1.webp"
+                 alt="한국사능력검정시험 1급 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">한국사능력검정시험 1급</span>
+          <span class="ev-issuer">국사편찬위원회</span>
+        </a>
+      </li></ul>
+    </div>
+    <div class="ev-group">
+      <h3 class="ev-group-head"><span>교육이수증</span>
+        <span class="count">13건</span></h3>
+      <ul class="ev-grid">
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/nuclear-systems.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/nuclear-systems.webp"
+                 alt="원자력발전계통교육 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">원자력발전계통교육</span>
+          <span class="ev-issuer">한국폴리텍Ⅲ대학</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/rt-flex.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/rt-flex.webp"
+                 alt="RT-flex 전자엔진 고등과정 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">RT-flex 전자엔진 고등과정</span>
+          <span class="ev-issuer">Wärtsilä Land &amp; Sea Academy</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/engine-room-sim.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/engine-room-sim.webp"
+                 alt="기관실 자동화 시스템 운용 시뮬레이션 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">기관실 자동화 시스템 운용 시뮬레이션</span>
+          <span class="ev-issuer">한진해운 운항훈련원</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/power-wiring.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/power-wiring.webp"
+                 alt="동력배선 (NCS, HRD-Net) 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">동력배선 (NCS, HRD-Net)</span>
+          <span class="ev-issuer">한국폴리텍대학 동부산캠퍼스</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/ship-security.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/ship-security.webp"
+                 alt="선박 보안교육 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">선박 보안교육</span>
+          <span class="ev-issuer">—</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/halal-middle-east.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/halal-middle-east.webp"
+                 alt="할랄과 중동시장 비즈니스 실무 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">할랄과 중동시장 비즈니스 실무</span>
+          <span class="ev-issuer">한국무역협회</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/cost-accounting.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/cost-accounting.webp"
+                 alt="[재경관리사] 원가관리회계 기본이론 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">[재경관리사] 원가관리회계 기본이론</span>
+          <span class="ev-issuer">휴넷</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/trade-practice.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/trade-practice.webp"
+                 alt="무역실무 에센스 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">무역실무 에센스</span>
+          <span class="ev-issuer">휴넷</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/pm-course.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/pm-course.webp"
+                 alt="프로젝트가 많아서 걱정인 PM에게 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">프로젝트가 많아서 걱정인 PM에게</span>
+          <span class="ev-issuer">휴넷</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/business-planning.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/business-planning.webp"
+                 alt="업무에 바로 쓰는 실전 기획 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">업무에 바로 쓰는 실전 기획</span>
+          <span class="ev-issuer">휴넷</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/ilac-esl.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/ilac-esl.webp"
+                 alt="ILAC ESL 과정 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">ILAC ESL 과정</span>
+          <span class="ev-issuer">ILAC (International Language Academy of Canada)</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/ilac-business.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/ilac-business.webp"
+                 alt="ILAC 비즈니스영어 과정 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">ILAC 비즈니스영어 과정</span>
+          <span class="ev-issuer">ILAC (International Language Academy of Canada)</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/kgic-translation.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/kgic-translation.webp"
+                 alt="KGIBC 통·번역 과정 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">KGIBC 통·번역 과정</span>
+          <span class="ev-issuer">KGIBC (King George International Business College)</span>
+        </a>
+      </li></ul>
+    </div>
+</section>
+<section class="section wrap" id="contact-ko">
+  <div class="contact">
+    <h2>연락</h2>
+    <p class="lead">경험을 연결하고, 사람을 잇고, 프로젝트를 완성하는 다음 만남을 기다립니다.</p>
+    <a class="mail" href="mailto:effective-altruist@naver.com">effective-altruist@naver.com</a>
+    <div class="contact-cta">
+      <a class="btn btn-primary" href="mailto:effective-altruist@naver.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><span>이메일 보내기</span></a>
+      <button class="btn btn-ghost" type="button" data-copy="effective-altruist@naver.com"
+              data-copied="복사했습니다">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 9h10v12H9z"/><path d="M15 9V5H5v12h4"/></svg><span data-copy-label>주소 복사</span></button>
+      <button class="btn btn-ghost" type="button" data-print>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6M7 19H5v-7h14v7h-2"/><path d="M7 15h10v6H7z"/></svg><span>PDF로 저장</span></button>
+    </div>
+    <p class="hint">브라우저 인쇄(Ctrl+P)로 접힌 내용까지 전부 A4에 출력됩니다.</p>
+  </div>
+</section></div>
+  <div data-lang-block="en">
+<section class="hero wrap" id="top-en">
+  <div class="hero-grid">
+    <div class="hero-main">
+      <div class="hero-badge"><span class="dot"></span>
+        <span class="label-caps">OFFSHORE WIND &amp; RENEWABLE ENERGY · PROJECT MANAGER</span></div>
+      <h1>Development · Design · Construction (Fabrication) · Operations — a <span class="accent">PMP-certified engineer</span> who has worked the full lifecycle</h1>
+      <p class="hero-tagline">A PMP-certified engineer who has delivered the offshore wind value chain phase by phase — from development and permitting through to onshore substation EPCC construction</p>
+      <div class="hero-meta"><span>B.Eng. in Marine Engineering Systems, Mokpo National Maritime University (double major in Power Machinery Engineering)</span><span>PMP · Marine Engineer Class 2 (Engine) · Machine Maintenance Engineer · Renewable Energy Equipment Engineer</span></div>
+    </div>
+    <figure class="hero-photo">
+      <img src="./assets/profile.webp"
+           alt="Portrait of Hajun Sung"
+           width="354" height="472"
+           loading="eager" decoding="async" fetchpriority="high">
+    </figure>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="mailto:effective-altruist@naver.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><span>Send Email</span></a>
+      <button class="btn btn-ghost" type="button" data-print>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6M7 19H5v-7h14v7h-2"/><path d="M7 15h10v6H7z"/></svg><span>Save as PDF</span></button>
+    </div>
+  </div>
+</section>
+<section class="section wrap" id="metrics-en">
+  <header class="sec-head"><span class="label-caps">KEY METRICS</span><h2>Key Metrics</h2></header>
+  <div class="metrics"><div class="metric"><span class="label-caps">Total Experience</span><span class="value">11 years 7 months</span><span class="note">Shipping to offshore wind</span></div><div class="metric"><span class="label-caps">Companies</span><span class="value">7</span><span class="note">One per value-chain phase</span></div><div class="metric"><span class="label-caps">Largest Project</span><span class="value">532MW</span><span class="note">Anma offshore wind onshore substation EPCC</span></div><div class="metric"><span class="label-caps">Key Credentials</span><span class="value">PMP +3</span><span class="note">PMP · Marine Eng. · Renewables · Maintenance</span></div></div>
+</section>
+<section class="section wrap" id="valuechain-en">
+  <header class="sec-head"><span class="label-caps">DIFFERENTIATOR</span><h2>Value Chain Coverage</h2><p class="lead">In power projects the delivery party changes at every phase, and risk collects at those boundaries. I have worked all four phases below, each at a different company.</p></header>
+  <div class="vc-flow">
+    <article class="vc-step">
+      <div class="vc-head"><span class="vc-no">01</span>
+        <h3 class="vc-phase">Development</h3></div>
+      <span class="vc-scope">Business Development · Permitting</span>
+      <span class="vc-org">Soosan Industries · Sekwang Engineering</span>
+      <p class="vc-work">Domestic power plant bidding, overseas business (Barakah NPP maintenance and others) and project management / power complex review, public waters occupancy fee assessment, permitting for 3 floating LiDAR stations, marine siting consultancy, joint development agreements</p>
+    </article>
+    <article class="vc-step">
+      <div class="vc-head"><span class="vc-no">02</span>
+        <h3 class="vc-phase">Design</h3></div>
+      <span class="vc-scope">Engineering · Technical Services</span>
+      <span class="vc-org">Sekwang Engineering</span>
+      <p class="vc-work">Equinor Firefly floating offshore wind technical services — floating substructure specification draft, permitting legal review, English reporting to the client and design document control</p>
+    </article>
+    <article class="vc-step">
+      <div class="vc-head"><span class="vc-no">03</span>
+        <h3 class="vc-phase">Construction (Fabrication)</h3></div>
+      <span class="vc-scope">Fabrication · Marine Transport · EPCC</span>
+      <span class="vc-org">Panasia · Samjin Elex · HMT Megaline</span>
+      <p class="vc-work">Anma 532MW onshore substation EPCC — HSSE Plan, HAZID (DNV), design document control / TP and heavy-cargo transport proposals with stowage and stability review / technical claim handling in a manufacturing quality department</p>
+    </article>
+    <article class="vc-step">
+      <div class="vc-head"><span class="vc-no">04</span>
+        <h3 class="vc-phase">Operations</h3></div>
+      <span class="vc-scope">O&amp;M · Equipment Maintenance</span>
+      <span class="vc-org">Soosan Industries · Hanjin Shipping · Panasia · DK MTech</span>
+      <p class="vc-work">Participation in KHNP planned preventive maintenance (overhaul) / hands-on operation and full overhaul of engines, generators, pumps and boilers</p>
+    </article></div>
+  <div class="vc-spine">
+    <span class="label-caps">The spine across all four phases</span>
+    <h3>PMP-based Project Management</h3>
+    <p class="note">Integrated management of schedule, risk, documentation, change orders, progress billing and interfaces between participating companies across development, design, construction (fabrication) and operations.</p>
+  </div>
+</section>
+<section class="section wrap" id="summary-en">
+  <header class="sec-head"><span class="label-caps">OVERVIEW</span><h2>Overview</h2></header>
+  <figure class="summary-fig">
+    <a class="summary-shot" href="./assets/summary-en.webp"
+       target="_blank" rel="noopener">
+      <img src="./assets/summary-en.webp" alt="“Me at a Glance” infographic — six areas of experience (marine engineer, technical claims and overseas commissioning, power plant O&amp;M and bidding, offshore wind planning and design, heavy-cargo marine transport, onshore substation design) mapped across the six project phases: plan, design, manufacture, construct, transport and operate"
+           width="2400" height="1600"
+           loading="lazy" decoding="async">
+      <span class="summary-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8v6M8 11h6"/></svg>
+        <span>View full size</span></span>
+    </a>
+    <figcaption>Click to open at full size.</figcaption>
+  </figure>
+  <details class="fold summary-fold">
+    <summary><span>Read as text</span></summary>
+    <div class="fold-body"><div class="summary"><p><strong>A renewable energy (offshore wind and solar PV) project manager who started in the field and connects every phase of a project</strong></p><p>On a foundation of hands-on work with mechanical and electrical plant as a ship&#x27;s engineer, I have widened my career through technical claims and overseas commissioning at a manufacturer, O&amp;M project management and bidding in power generation, and import-export contracting with public agencies, into offshore wind development and design, heavy-cargo marine transport and onshore substation design. Having <strong>worked every phase of a project, from development through operations</strong>, my strength is that I <strong>understand the language of each phase and connect them to one another</strong>.</p><p>I describe myself as a <strong>&quot;citizen who studies&quot;</strong> — a commitment to treat every site I work on as a place to learn, and to take on hard study and hard work together.</p></div></div>
+  </details>
+</section>
+<section class="section wrap" id="competency-en">
+  <header class="sec-head"><span class="label-caps">CAPABILITIES</span><h2>Core Competencies</h2></header>
+  <div class="comp-grid">
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18M3 12h12M3 19h7"/><circle cx="19" cy="12" r="2"/><circle cx="14" cy="19" r="2"/></svg></span>
+      <h3>Project Management</h3>
+      <div class="body"><p>I have aligned the interests of site, head office and client, and managed the document system and schedule through basic and detailed design. I hold experience in change orders and progress billing.</p></div>
+      <p class="evidence"><b>Evidence</b>PMP (PMI, 2022.09) / Project Management NCS, basic and intermediate 34h / Business Planning NCS 17h / MS Project</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2"/><path d="M12 10V3M13.7 13l6 3.5M10.3 13l-6 3.5"/></svg></span>
+      <h3>Offshore Wind Development · Permitting</h3>
+      <div class="body"><p>I drafted the permitting documents for floating offshore wind projects myself. These included scopes of work, prime and subcontract agreements, public waters occupancy applications, and joint development agreements.</p></div>
+      <p class="evidence"><b>Evidence</b>Public waters occupancy fee assessment / Floating LiDAR installation permitting / Marine siting consultancy / WindPro · QGIS</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <h3>HSE · Risk Management</h3>
+      <div class="body"><p>I wrote the HSSE Plan for the <strong>532MW</strong> Anma offshore wind onshore substation EPCC. I contracted the HAZID study with <strong>DNV</strong> and managed its execution.</p></div>
+      <p class="evidence"><b>Evidence</b>HSSE Plan preparation / HAZID service contract and management (DNV) / OPITO Basic Offshore Safety 24h</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h9l5 5v13H5z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+      <h3>Contracts · Bidding · Estimating</h3>
+      <div class="body"><p>I prepared bid packages for power plant maintenance services, covering both pre-qualification and technical evaluation. I reviewed RFPs and RFQs from international EPC clients and produced voyage and time charter quotations and proposals.</p></div>
+      <p class="evidence"><b>Evidence</b>Trade English Level 1 / Import-Export and Trade Practice NCS 18h / Cost Management Accounting 19h</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span>
+      <h3>Equipment Engineering</h3>
+      <div class="body"><p>I have operated and maintained engines, generators, pumps (gear, centrifugal and piston), compressors, motors, purifiers, boilers, hydraulic machinery and valves with my own hands. I can read drawings and manuals and hold technical discussions with suppliers.</p></div>
+      <p class="evidence"><b>Evidence</b>Marine Engineer Class 2 (Engine) / Machine Maintenance Engineer / Renewable Energy Equipment Engineer / Nuclear Power Systems training 77h</p>
+    </article>
+    <article class="comp">
+      <span class="comp-ico"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg></span>
+      <h3>Overseas Fieldwork &amp; English Documentation</h3>
+      <div class="body"><p>I have worked with international clients and classification societies including <strong>Equinor, DNV, Lamprell, Technip and Saipem</strong> through English-language documentation. I produced English versions of specifications, supervision progress reports, RFQs and proposals, and travelled to commissioning and technical-claim sites across Europe, the Americas, the Middle East, Asia and Africa to resolve problems on site.</p></div>
+      <p class="evidence"><b>Evidence</b>Overseas A/S and commissioning trips (approx. 80 flights in one year) / ITT Business English Translation Level 2 / One year of language study in Canada (ILAC/KGIBC)</p>
+    </article></div>
+</section>
+<section class="section wrap" id="projects-en">
+  <header class="sec-head"><span class="label-caps">DEPTH</span><h2>Selected Projects</h2></header>
+  <div class="proj-list">
+    <article class="proj">
+      <figure class="proj-photo fit-cover">
+        <img src="./assets/projects/ulsan-ecogreen.webp"
+             alt="Satellite map off Ulsan marking the met-mast installation point"
+             width="1280" height="692"
+             loading="lazy" decoding="async">
+        <figcaption>Site location map — floating LiDAR met-masts</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">Stage <b>Development (Permitting)</b></span><span class="kv">Period <b>2023 ~ 2024</b></span><span class="kv scale">Scale <b>3 stations</b></span></div>
+        <h3>Ulsan Eco Green Offshore Wind — Permitting for 3 Floating LiDAR Stations</h3>
+        <p class="proj-org">Sekwang Engineering · Energy Development Division · Manager</p>
+        <div class="badges"><span class="badge badge-primary">Offshore Wind</span><span class="badge">Permitting</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">Situation</span><div class="text"><p>A generation licence for offshore wind requires wind resource measurement first. <strong>Three</strong> floating LiDAR stations had to be installed, and each location needed its own public waters occupancy permit.</p></div></div><div class="blk blk-role"><span class="label-caps">Role</span><div class="text"><p>I drafted the full document set for the permitting service, from scope definition through to the subcontract.</p></div></div><div class="blk blk-action"><span class="label-caps">Actions</span><div class="text"><ul><li>Scope of work preparation</li><li>Prime contract and subcontract preparation</li><li>Public waters occupancy applications for the LiDAR stations</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">Outcome</span><div class="text"><p>I prepared and submitted every document required for the installation permits of the three floating LiDAR stations, completing the service without a hitch.</p></div></div></div>
+    </article>
+    <article class="proj">
+      <figure class="proj-photo fit-cover">
+        <img src="./assets/projects/equinor-firefly.webp"
+             alt="Nautical chart off Ulsan marking the project site, cable routes and the naval training area"
+             width="1018" height="639"
+             loading="lazy" decoding="async">
+        <figcaption>Nautical chart — project site and submarine cable route off Ulsan</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">Stage <b>Development · Design</b></span><span class="kv">Period <b>2023.07 ~ 2024.05</b></span><span class="kv">Client <b>Equinor</b></span></div>
+        <h3>Equinor Firefly Floating Offshore Wind — Technical Services</h3>
+        <p class="proj-org">Sekwang Engineering · Energy Development Division · Manager</p>
+        <div class="badges"><span class="badge badge-primary">Offshore Wind</span><span class="badge">Design</span><span class="badge">Permitting</span><span class="badge">International Client</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">Situation</span><div class="text"><p>A technical service for the windfarm offshore area of the Firefly floating offshore wind project led by Norway&#x27;s <strong>Equinor</strong>. Because the client was international, every deliverable required Korean statutory review and English reporting at the same time.</p></div></div><div class="blk blk-role"><span class="label-caps">Role</span><div class="text"><p>I was responsible for floating substructure technical documents, permitting legal review, public waters cost assessment, and English reporting to the client.</p></div></div><div class="blk blk-action"><span class="label-caps">Actions</span><div class="text"><ul><li>Floating substructure specification draft</li><li>Permitting legal review and client support</li><li>Public waters occupancy fee assessment</li><li>English versions of calculation records, supervision progress reports and other client submissions</li><li>Weekly progress reporting</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">Outcome</span><div class="text"><p>By leading the public waters occupancy applications, occupancy fee assessment, permitting review and marine siting consulting, I reduced the administrative and legal uncertainty of the project&#x27;s early stage. I also supported the commercial negotiations by producing English versions of the client submissions and putting the technical and contractual documents in order.</p></div></div></div>
+    </article>
+    <article class="proj">
+      <figure class="proj-photo fit-cover">
+        <img src="./assets/projects/htv-chartering.webp"
+             alt="Large offshore structures being loaded onto a heavy transport vessel at a quay"
+             width="1280" height="853"
+             loading="lazy" decoding="async">
+        <figcaption>Heavy transport vessel (HTV) loading operation</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">Stage <b>Transport · Logistics</b></span><span class="kv">Period <b>2024.06 ~ 2024.11</b></span></div>
+        <h3>Heavy Transport Vessel (HTV) Chartering — Proposals and Quotations for International EPC Projects</h3>
+        <p class="proj-org">HMT Megaline · Sales Division · Manager</p>
+        <div class="badges"><span class="badge badge-primary">Offshore Wind</span><span class="badge">Shipping &amp; Transport</span><span class="badge">Bidding &amp; Proposals</span><span class="badge">International Client</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">Situation</span><div class="text"><p>Large structures for international EPC contractors — FLNG modules, offshore wind substations, transition pieces — can only be moved on self-propelled heavy transport vessels. Every cargo differs in weight, geometry and voyage conditions, so the optimal transport solution had to be established from the bidding stage onwards through stowage planning and stability review.</p></div></div><div class="blk blk-role"><span class="label-caps">Role</span><div class="text"><p>Handling chartering sales and business development for self-propelled heavy transport vessels, I covered everything from client RFP/RFQ review through proposals, quotations, bidding and contract awards to change order management.</p></div></div><div class="blk blk-action"><span class="label-caps">Actions</span><div class="text"><ul><li>Proposals — Samsung Heavy Industries &quot;Cedar LNG FLNG&quot;, Technip Energies &quot;ODUM Petrochemical&quot;, Lamprell &quot;Norfolk &amp; Southcoast TP transport&quot;, Lamprell &quot;OW Southcoast TP transport&quot;</li><li>Voyage charter / time charter quotations — Lamprell, SHI, STX, DHL, PTSC, SKPO, Saipem, Technip, Kuehne+Nagel, DEME, Heerema, MCSI and others</li><li>Change order administration and progress billing on the GTPP Project (DL E&amp;C)</li><li>Technical material control — stowage plan, vessel stability, grillage</li><li>Quotation and vessel position list management; company profile preparation and English version</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">Outcome</span><div class="text"><p>I delivered proposals and quotations for international EPC projects including offshore wind TP transport, and learned the transport and installation constraints of offshore wind components in practice.</p></div></div></div>
+    </article>
+    <article class="proj">
+      <figure class="proj-photo fit-cover">
+        <img src="./assets/projects/anma-substation.webp"
+             alt="Location map showing the distance between Anma Island and Yeonggwang"
+             width="974" height="418"
+             loading="lazy" decoding="async">
+        <figcaption>Anma offshore wind farm location — Yeonggwang, Jeonnam</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">Stage <b>Construction (EPCC)</b></span><span class="kv">Period <b>2025.02 ~ 2025.11</b></span><span class="kv scale">Scale <b>532MW</b></span></div>
+        <h3>Anma Offshore Wind Onshore Substation EPCC</h3>
+        <p class="proj-org">Samjin Elex · Transmission &amp; Substation Division · Manager</p>
+        <div class="badges"><span class="badge badge-primary">Offshore Wind</span><span class="badge">Construction &amp; EPC</span><span class="badge">Design</span><span class="badge">HSE</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">Situation</span><div class="text"><p>The onshore substation EPCC project providing grid connection for the Anma offshore wind farm (<strong>532MW</strong>) in Yeonggwang, Jeollanam-do. The project was in transition from basic to detailed design. Design deliverables were being produced simultaneously, while the HSE framework had not yet been established.</p></div></div><div class="blk blk-role"><span class="label-caps">Role</span><div class="text"><p>Within the Transmission &amp; Substation Division I was responsible for design document control, establishing the HSE framework, and awarding the risk review service.</p></div></div><div class="blk blk-action"><span class="label-caps">Actions</span><div class="text"><ul><li>Operating a document system tracking receipt, review and issue history of drawings through basic and detailed design</li><li>Preparation of the project HSSE (Health, Safety, Security and Environment) Plan</li><li>Contracting the HAZID (Hazard Identification and Hazard Assessment) service with DNV and managing its execution</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">Outcome</span><div class="text"><p>I established and maintained the HSSE Plan for client submission, and managed the <strong>DNV</strong> HAZID engineering service end to end — from awarding the contract through execution to review of the deliverables. I also operated a document control system that systematically tracked drawing history and revisions in an area of frequent design change.</p></div></div></div>
+    </article>
+    <article class="proj">
+      <figure class="proj-photo fit-cover pos-top">
+        <img src="./assets/projects/barakah-npp.webp"
+             alt="View of two reactor containment buildings at the Barakah plant"
+             width="960" height="564"
+             loading="lazy" decoding="async">
+        <figcaption>Barakah Nuclear Power Plant, UAE</figcaption>
+      </figure>
+      <div class="proj-head">
+        <div class="proj-rail"><span class="kv">Stage <b>O&amp;M Tender · Overseas Business</b></span><span class="kv">Period <b>2016.12 ~ 2019.03</b></span></div>
+        <h3>UAE Barakah NPP Unit 1 Routine Maintenance Competitive Tender</h3>
+        <p class="proj-org">Soosan Industries · Project Management / New Growth Business / Overseas Business Team (concurrent)</p>
+        <div class="badges"><span class="badge badge-primary">Bidding &amp; Proposals</span><span class="badge">International Client</span><span class="badge">Power &amp; Nuclear</span></div>
+      </div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">Situation</span><div class="text"><p>This was the first time the Korean power maintenance industry had entered the competitive tender for routine maintenance of UAE Barakah NPP Unit 1. It was also the company&#x27;s first overseas venture, so the bidding framework had to be built from nothing with no precedent to follow.</p></div></div><div class="blk blk-role"><span class="label-caps">Role</span><div class="text"><p>Working concurrently across the project management, new growth business and overseas business teams, I handled bid documentation and overseas partnership work.</p></div></div><div class="blk blk-action"><span class="label-caps">Actions</span><div class="text"><ul><li>Preparation of power plant maintenance service bid packages (pre-qualification and technical evaluation documents)</li><li>Preparation of engineering association registration documents</li><li>Company promotional material and client presentations</li><li>Support for joint venture and subsidiary operations</li><li>Participation in the KEPCO Saudi road show</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">Outcome</span><div class="text"><p>I supported our entry into the Barakah NPP maintenance competitive tender and concluded MOUs with two local Saudi companies, building experience in overseas business development and partnership formation. Working on a large overseas project brought home how much depends on securing specialist personnel and on effective risk sharing, which led me to strengthen my project management capability and obtain the <strong>PMP</strong> certification.</p></div></div></div>
+    </article></div>
+  <header class="sec-head" style="margin-top:var(--s5)">
+    <span class="label-caps">FIELD</span><h2>Field Episodes</h2></header>
+  <div class="epi-grid">
+    <article class="epi">
+      <h3>Recovery from Bow Flooding During an Indian Ocean Passage</h3>
+      <p class="proj-org">Hanjin Shipping · Second Engineer</p>
+      <div class="badges"><span class="badge">Equipment Maintenance</span><span class="badge">Problem Solving</span></div>
+      <div class="text"><p>During a passage across the Indian Ocean the vessel&#x27;s bow section flooded and much of the equipment in that compartment was submerged in seawater. Giving up would have delayed the sailing schedule and written off every flooded unit.</p><p>I relearned the equipment manuals from the beginning and carried out the recovery procedure prescribed by company guidance over two months. Every flooded unit was returned to normal operation and the vessel sailed on schedule. On the strength of the internal assessment of this work I was selected for the delivery team of a newbuilding ordered by the company.</p></div>
+    </article>
+    <article class="epi">
+      <h3>Newbuilding Delivery of Hanjin Indigo</h3>
+      <p class="proj-org">Hanjin Shipping · Second Engineer</p>
+      <div class="badges"><span class="badge">Newbuilding</span><span class="badge">Commissioning</span><span class="badge">Shipbuilding</span></div>
+      <div class="text"><p>I took part as a delivery team member for the container ship Hanjin Indigo (<strong>45,169 GRT</strong>), ordered by Hanjin Shipping and built by Samsung Heavy Industries. At the yard I personally verified the installation, commissioning and acceptance inspection of the engine plant. I experienced the entire process by which design drawings become working equipment.</p></div>
+    </article></div>
+</section>
+<section class="section wrap" id="career-en">
+  <header class="sec-head"><span class="label-caps">CONTINUITY</span><h2>Career</h2></header>
+  <div class="timeline">
+    <article class="job">
+      <div class="job-head"><h3>Samjin Elex Co., Ltd.</h3>
+        <span class="job-period">2025.02 ~ 2025.11 <span class="num">(9months)</span></span></div>
+      <p class="job-role">Transmission &amp; Substation Division · Manager · Offshore Wind</p>
+      <p class="job-co">Revenue KRW 180.0bn / 150 employees / Specialist contractor in electrical, ICT, fire protection and EMP shielding · <a href="http://www.samjinelex.com/" target="_blank" rel="noopener">http://www.samjinelex.com/</a></p>
+      <div class="job-body"><p>On the <strong>Anma Offshore Wind (532MW)</strong> onshore substation EPCC project I was responsible for design document control and for establishing the HSE framework.</p><ul><li>Document control through basic and detailed design</li><li>Preparation of the HSSE (Health, Safety, Security and Environment) Plan</li><li>HAZID (Hazard Identification and Hazard Assessment) service contract and management (DNV)</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>HMT Megaline Co., Ltd.</h3>
+        <span class="job-period">2024.06 ~ 2024.11 <span class="num">(5months)</span></span></div>
+      <p class="job-role">Sales Division (Chartering &amp; Customer Relationship Division) · Manager · Shipping &amp; Logistics</p>
+      <p class="job-co">KCTC subsidiary / Revenue approx. KRW 25.0bn / approx. 12 employees / Heavy-cargo carrier · <a href="https://www.hi-megaline.com/" target="_blank" rel="noopener">https://www.hi-megaline.com/</a></p>
+      <div class="job-body"><p>I handled heavy transport vessel (HTV) chartering sales, covering proposals, quotations and change orders for international EPC clients.</p><ul><li>Client RFP/RFQ review and proposal writing (Samsung Heavy Industries, Technip Energies, Lamprell and others)</li><li>Voyage charter / time charter quotations — Lamprell, SHI, STX, DHL, PTSC, SKPO, Saipem, Technip, Kuehne+Nagel, DEME, Heerema and others</li><li>Change order administration and progress billing on the GTPP Project (DL E&amp;C)</li><li>Technical material control (stowage plan, vessel stability, grillage) and English version of the company profile</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>Sekwang Engineering Co., Ltd.</h3>
+        <span class="job-period">2023.07 ~ 2024.05 <span class="num">(10months)</span></span></div>
+      <p class="job-role">Energy Development Division · Manager · Offshore Wind</p>
+      <p class="job-co">Revenue approx. KRW 70.0bn / approx. 250 employees / Port and harbour engineering specialist · <a href="http://www.sekwangeng.co.kr/new/" target="_blank" rel="noopener">http://www.sekwangeng.co.kr/new/</a></p>
+      <div class="job-body"><p>I produced the development and permitting documents and design support deliverables for offshore wind generation projects.</p><ul><li>Equinor Firefly floating offshore wind technical services — floating substructure specification draft, weekly progress reporting, permitting legal review, public waters occupancy fee assessment, English translation of deliverables</li><li>Ulsan Eco Green offshore wind floating LiDAR permitting service for 3 stations — scope of work, prime contract, subcontract and public waters occupancy applications</li><li>SK E&amp;S Gangneung offshore wind generation project — quotation and joint development agreement</li><li>Introduction of WindPro and delivery of a wind resource analysis seminar; marine siting consultancy</li><li>English translation and review of RFQ, SOW and proposals for Renova / Yeosu Samsan-Chodo offshore wind</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>DK MTech Co., Ltd. (formerly Donggang MTech)</h3>
+        <span class="job-period">2019.05 ~ 2022.06 <span class="num">(38months)</span></span></div>
+      <p class="job-role">Customer Support Team · Senior Team Leader · Marine Equipment</p>
+      <p class="job-co">Revenue approx. KRW 30.0bn / approx. 44 employees / B2G marine equipment supply, commissioning and maintenance · <a href="https://dkmtech.com/" target="_blank" rel="noopener">https://dkmtech.com/</a></p>
+      <div class="job-body"><p>I handled technical support and original-manufacturer liaison for marine equipment supplied to the Coast Guard, Navy and other public agencies.</p><ul><li>Claim management — technical discussion with foreign original manufacturers, complaint reports, issuing invoices for handling costs</li><li>After-sales engineering — commissioning and full overhaul</li><li>Quotation preparation and overseas purchase orders; repair estimates for delivered equipment</li><li>Procedures and manuals; translation of manufacturer manuals and agency documents</li><li>Quality certification and CS certification documentation</li><li>Participation in the national R&amp;D project &quot;Development of a Next-Generation Global 3D Maritime Traffic Control System based on AI and e-Navigation&quot;</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>Soosan Industries Co., Ltd.</h3>
+        <span class="job-period">2016.12 ~ 2019.03 <span class="num">(27months)</span></span></div>
+      <p class="job-role">Project Management Team · New Growth Business Team · Overseas Business Team (concurrent) · Staff · Power &amp; Plant</p>
+      <p class="job-co">Revenue approx. KRW 263.8bn / approx. 1,316 employees / Power plant and plant electrical works and equipment maintenance · <a href="https://www.soosanind.co.kr/" target="_blank" rel="noopener">https://www.soosanind.co.kr/</a></p>
+      <div class="job-body"><p>I prepared domestic and international bid packages for nuclear, thermal and renewable O&amp;M business, and supported overseas business development.</p><ul><li>Participation in the first competitive tender for routine maintenance of UAE Barakah NPP Unit 1</li><li>Preparation of power plant maintenance service bid packages (pre-qualification and technical evaluation documents)</li><li>Preparation of engineering association registration documents</li><li>Company promotional material and client presentations</li><li>Support for joint venture and subsidiary operations</li><li>Participation in the KEPCO Saudi road show; MOUs concluded with two local Saudi companies</li><li>Participation in a Vietnam solar PV project (capacity 70MW / total project cost USD 81,000,000)</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>Panasia Co., Ltd.</h3>
+        <span class="job-period">2015.04 ~ 2015.12 <span class="num">(9months)</span></span></div>
+      <p class="job-role">Quality Management Division · Assistant Manager · Marine Equipment Manufacturing</p>
+      <p class="job-co">Revenue approx. KRW 355.8bn / approx. 284 employees / Manufacturer of ship components and emission abatement systems · <a href="https://www.worldpanasia.com/" target="_blank" rel="noopener">https://www.worldpanasia.com/</a></p>
+      <div class="job-body"><p>I resolved domestic and international technical claims for ship components and emission abatement systems, and carried out after-sales field service.</p><ul><li>Domestic and international after-sales service (Australia, China, Middle East, Europe, United States and others — approx. 80 flights in one year)</li><li>Claim intake, resolution and management</li><li>Product operation and maintenance training for domestic and international customers</li><li>Troubleshooting documents, product manuals and promotional material (Korean and English)</li></ul></div>
+    </article>
+    <article class="job">
+      <div class="job-head"><h3>Hanjin Shipping Co., Ltd.</h3>
+        <span class="job-period">2010.04 ~ 2013.08 <span class="num">(41months)</span></span></div>
+      <p class="job-role">Container Fleet Team · Second Engineer · Shipping &amp; Logistics</p>
+      <p class="job-co">Revenue approx. KRW 9.7tn / approx. 1,400 employees / Korea&#x27;s largest shipping company</p>
+      <div class="job-body"><p>Serving as an engineer officer aboard full container ships, I operated and maintained mechanical and electrical plant across the vessel.</p><ul><li>Maintenance of compressors, motors, generators, pumps (gear, centrifugal and piston), purifiers, level gauges, reefer containers and electrical systems</li><li>Hydraulic machinery and valve maintenance; boiler management, operation and maintenance</li><li>Fuel and lubricating oil consumption calculation and inventory control; machinery spares control</li><li>Participation in newbuilding delivery — Hanjin Indigo (45,169 GRT), built by Samsung Heavy Industries</li><li>Claim management and resolution</li></ul></div>
+    </article></div>
+</section>
+<section class="section wrap" id="credentials-en">
+  <header class="sec-head"><span class="label-caps">VERIFIABLE</span><h2>Credentials &amp; Training</h2></header>
+  <div class="cert-key">
+    <article class="cert-card">
+      <h3>PMP (Project Management Professional)</h3>
+      <span class="meta">PMI · 2022.09.15</span>
+      
+    </article>
+    <article class="cert-card">
+      <h3>Machine Maintenance Engineer</h3>
+      <span class="meta">Human Resources Development Service of Korea · 2024.06.18</span>
+      
+    </article>
+    <article class="cert-card">
+      <h3>Renewable Energy Equipment Engineer (Photovoltaic)</h3>
+      <span class="meta">Human Resources Development Service of Korea · 2023.06.09</span>
+      
+    </article>
+    <article class="cert-card">
+      <h3>Marine Engineer Class 2 (Engine)</h3>
+      <span class="meta">Korea Institute of Maritime and Fisheries Technology · 2012.11.19</span>
+      
+    </article></div>
+  <details class="fold">
+    <summary><span>All Certifications</span>
+      <span class="count">8</span></summary>
+    <div class="fold-body"><div class="tbl-scroll"><table class="data">
+      <thead><tr><th>Name</th><th>Issuer</th>
+        <th>Obtained</th></tr></thead>
+      <tbody><tr><td class="name">PMP (Project Management Professional)</td><td>PMI</td><td class="n">2022.09.15</td></tr><tr><td class="name">Machine Maintenance Engineer</td><td>Human Resources Development Service of Korea</td><td class="n">2024.06.18</td></tr><tr><td class="name">Renewable Energy Equipment Engineer (Photovoltaic)</td><td>Human Resources Development Service of Korea</td><td class="n">2023.06.09</td></tr><tr><td class="name">Marine Engineer Class 2 (Engine)</td><td>Korea Institute of Maritime and Fisheries Technology</td><td class="n">2012.11.19</td></tr><tr><td class="name">Trade English Level 1</td><td>Korea Chamber of Commerce and Industry</td><td class="n">2021.10.06</td></tr><tr><td class="name">Computer Specialist in Spreadsheet &amp; Database Level 1</td><td>Korea Chamber of Commerce and Industry</td><td class="n">2016.04.22</td></tr><tr><td class="name">ITT Business English Translation Level 2</td><td>International Interpretation and Translation Association</td><td class="n">2014.08.05</td></tr><tr><td class="name">Korean History Proficiency Test Level 1</td><td>National Institute of Korean History</td><td class="n">2016.02.11</td></tr></tbody></table></div></div>
+  </details>
+  <details class="fold">
+    <summary><span>All Training</span>
+      <span class="count">14 · 329 hours total</span></summary>
+    <div class="fold-body"><div class="tbl-scroll"><table class="data">
+      <thead><tr><th>Name</th><th>Issuer</th>
+        <th>Obtained</th><th>Hours</th>
+        <th>Field</th></tr></thead>
+      <tbody><tr><td class="name">Nuclear Power Systems Training</td><td>Korea Polytechnic III College</td><td class="n">2017.06.19 ~ 2017.06.30</td><td class="n hours">77</td><td>Power</td></tr><tr><td class="name">[CFO Accounting] Financial Accounting Fundamentals</td><td>Hunet</td><td class="n">2021.11</td><td class="n hours">36</td><td>Accounting</td></tr><tr><td class="name">Basic Offshore Safety Induction &amp; Emergency Training (OPITO)</td><td>COENS</td><td class="n">2015.05.11 ~ 2015.05.13</td><td class="n hours">24</td><td>Safety</td></tr><tr><td class="name">RT-flex Electronic Engine Advanced Course</td><td>Wärtsilä Land &amp; Sea Academy</td><td class="n">2012.11.14 ~ 2012.11.16</td><td class="n hours">24</td><td>Equipment</td></tr><tr><td class="name">Reefer Container Diagnosis and Repair</td><td>Hanjin Shipping Training Centre</td><td class="n">2010.02.03 ~ 2010.02.05</td><td class="n hours">24</td><td>Equipment</td></tr><tr><td class="name">[CFO Accounting] Cost Management Accounting Fundamentals</td><td>Hunet</td><td class="n">2021.10</td><td class="n hours">19</td><td>Accounting</td></tr><tr><td class="name">Import-Export Management and Trade Practice (NCS 02040302)</td><td>Hunet</td><td class="n">2019.10</td><td class="n hours">18</td><td>Trade</td></tr><tr><td class="name">Project Management (NCS 01010102)</td><td>Hunet</td><td class="n">2021.10</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Project Management Intermediate (NCS 01010102)</td><td>Hunet</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Business Planning (NCS 02010101)</td><td>Hunet</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Power Wiring (NCS, HRD-Net)</td><td>Korea Polytechnic University Dongbusan Campus</td><td class="n">2010.01.11 ~ 2010.01.12</td><td class="n hours">16</td><td>Equipment</td></tr><tr><td class="name">Engine Room Automation System Operation Simulation</td><td>Hanjin Shipping Training Centre</td><td class="n">2010.04.01 ~ 2010.04.10</td><td class="n hours">16</td><td>Equipment</td></tr><tr><td class="name">Halal and Middle East Market Business Practice</td><td>Korea International Trade Association</td><td class="n">-</td><td class="n hours">16</td><td>Trade</td></tr><tr><td class="name">On-Site CS Response Methods (NCS 02010302)</td><td>Hunet</td><td class="n">2020.02.24 ~ 2020.03.24</td><td class="n hours">8</td><td>CS</td></tr></tbody></table></div></div>
+  </details>
+  
+  <details class="fold">
+    <summary><span>Education · Languages · Other</span></summary>
+    <div class="fold-body"><div class="appx"><div class="appx-item"><h4 class="label-caps" style="font-size:11px;color:var(--secondary)">Languages · International Experience</h4></div><div class="appx-item"><h4>Language Study in Canada</h4><p class="meta">2013.10 ~ 2014.11 · ILAC / KGIBC</p><div class="text"><p>I completed ESL and Business English programmes at ILAC and an interpretation and translation programme at KGIBC.</p></div></div><div class="appx-item"><h4>Overseas Travel · Sea Service</h4><p class="meta">2010 ~ 2019</p><div class="text"><p>As an engineer officer aboard full container ships I sailed all five oceans and six continents. While at Panasia I travelled to Europe, the United States, China, Australia, Southeast Asia and South Africa for after-sales service and technical claims. While at Soosan Industries I took part in overseas solar PV business in the UAE, Saudi Arabia, Malaysia and Vietnam.</p></div></div><div class="appx-item"><h4 class="label-caps" style="font-size:11px;color:var(--secondary)">Education</h4></div><div class="appx-item"><h4>Mokpo National Maritime University, College of Maritime Sciences</h4><p class="meta">2006.03 ~ 2010.02 · Major Marine Engineering Systems (double major in Power Machinery Engineering)</p><p class="text">Bachelor&#x27;s degree / GPA 3.81 / 4.5</p></div><div class="appx-item"><h4>Gongju High School</h4><p class="meta">2003.03 ~ 2006.02</p><p class="text">Graduated</p></div><div class="appx-item"><h4 class="label-caps" style="font-size:11px;color:var(--secondary)">Other</h4></div><div class="appx-item"><h4>Research Record</h4><p class="text">Registered national researcher (ID withheld)</p><div class="text"><p>I participated as a researcher across two project years, at a <strong>74%</strong> participation rate, in the national R&amp;D project &quot;Development of a Next-Generation Global 3D Maritime Traffic Control System based on AI and e-Navigation&quot; (2019.10 ~ 2022.03 · government funding KRW 215m · DK MTech). The record is registered with the National Science and Technology Information Service (NTIS).</p><ul><li>Year 1, 2019.10 ~ 2020.09 — government funding KRW 100m / matching fund KRW 10.4m</li><li>Year 2, 2021.01 ~ 2022.03 — government funding KRW 115m / matching fund KRW 2.9m</li></ul></div></div><div class="appx-item"><h4>Tools</h4><p class="kv-list"><b>Advanced</b> Hangul (HWP), MS Word, MS Excel, MS PowerPoint</p><p class="kv-list"><b>Working</b> MS Project, QGIS, WindPro, AutoCAD, PDF editing</p></div><div class="appx-item"><h4>Military Service</h4><p class="text">Republic of Korea Navy, Transport Branch / 2010.02.02 ~ 2013.05.11 / Completed as industrial reserve personnel (sea service)</p></div><div class="appx-item"><h4>Award of Merit (Plaque of Appreciation)</h4><p class="text">Director, Hanmaum Blood Centre, Korea Industrial Health Association / 2023.12.30</p></div></div></div>
+  </details>
+</section>
+<section class="section wrap" id="evidence-en">
+  <header class="sec-head"><span class="label-caps">DOCUMENTS</span><h2>Evidence</h2><p class="lead">Scanned copies of certifications and training certificates. Select a thumbnail to open the full image in a new tab.</p></header>
+  
+    <div class="ev-group">
+      <h3 class="ev-group-head"><span>Certifications</span>
+        <span class="count">8</span></h3>
+      <ul class="ev-grid">
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/pmp.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/pmp.webp"
+                 alt="Copy of PMP (Project Management Professional)" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">PMP (Project Management Professional)</span>
+          <span class="ev-issuer">PMI</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/maintenance-engineer.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/maintenance-engineer.webp"
+                 alt="Copy of Machine Maintenance Engineer" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Machine Maintenance Engineer</span>
+          <span class="ev-issuer">한국산업인력공단</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/renewable-engineer.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/renewable-engineer.webp"
+                 alt="Copy of Renewable Energy Equipment Engineer (PV)" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Renewable Energy Equipment Engineer (PV)</span>
+          <span class="ev-issuer">한국산업인력공단</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/marine-engineer-2.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/marine-engineer-2.webp"
+                 alt="Copy of Marine Engineer Class 2 (Engine)" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Marine Engineer Class 2 (Engine)</span>
+          <span class="ev-issuer">한국해양수산연수원</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/trade-english-1.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/trade-english-1.webp"
+                 alt="Copy of Trade English Level 1" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Trade English Level 1</span>
+          <span class="ev-issuer">대한상공회의소</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/computer-specialist-1.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/computer-specialist-1.webp"
+                 alt="Copy of Computer Specialist Level 1" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Computer Specialist Level 1</span>
+          <span class="ev-issuer">대한상공회의소</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/itt-translation-2.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/itt-translation-2.webp"
+                 alt="Copy of ITT Business English Translation Level 2" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">ITT Business English Translation Level 2</span>
+          <span class="ev-issuer">국제통역번역협회</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/korean-history-1.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/korean-history-1.webp"
+                 alt="Copy of Korean History Proficiency Level 1" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Korean History Proficiency Level 1</span>
+          <span class="ev-issuer">국사편찬위원회</span>
+        </a>
+      </li></ul>
+    </div>
+    <div class="ev-group">
+      <h3 class="ev-group-head"><span>Training Certificates</span>
+        <span class="count">13</span></h3>
+      <ul class="ev-grid">
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/nuclear-systems.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/nuclear-systems.webp"
+                 alt="Copy of Nuclear Power Systems Training" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Nuclear Power Systems Training</span>
+          <span class="ev-issuer">한국폴리텍Ⅲ대학</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/rt-flex.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/rt-flex.webp"
+                 alt="Copy of RT-flex Electronic Engine Advanced Course" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">RT-flex Electronic Engine Advanced Course</span>
+          <span class="ev-issuer">Wärtsilä Land &amp; Sea Academy</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/engine-room-sim.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/engine-room-sim.webp"
+                 alt="Copy of Engine Room Automation System Operation Simulation" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Engine Room Automation System Operation Simulation</span>
+          <span class="ev-issuer">한진해운 운항훈련원</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/power-wiring.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/power-wiring.webp"
+                 alt="Copy of Power Wiring (NCS, HRD-Net)" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Power Wiring (NCS, HRD-Net)</span>
+          <span class="ev-issuer">한국폴리텍대학 동부산캠퍼스</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/ship-security.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/ship-security.webp"
+                 alt="Copy of Ship Security Training" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Ship Security Training</span>
+          <span class="ev-issuer">—</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/halal-middle-east.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/halal-middle-east.webp"
+                 alt="Copy of Halal and Middle East Market Business Practice" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Halal and Middle East Market Business Practice</span>
+          <span class="ev-issuer">한국무역협회</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/cost-accounting.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/cost-accounting.webp"
+                 alt="Copy of [CFO Accounting] Cost Management Accounting Fundamentals" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">[CFO Accounting] Cost Management Accounting Fundamentals</span>
+          <span class="ev-issuer">휴넷</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/trade-practice.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/trade-practice.webp"
+                 alt="Copy of Trade Practice Essentials" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Trade Practice Essentials</span>
+          <span class="ev-issuer">휴넷</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/pm-course.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/pm-course.webp"
+                 alt="Copy of Project Management Course" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Project Management Course</span>
+          <span class="ev-issuer">휴넷</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/business-planning.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/business-planning.webp"
+                 alt="Copy of Practical Business Planning" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Practical Business Planning</span>
+          <span class="ev-issuer">휴넷</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/ilac-esl.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/ilac-esl.webp"
+                 alt="Copy of ILAC ESL Programme" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">ILAC ESL Programme</span>
+          <span class="ev-issuer">ILAC (International Language Academy of Canada)</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/ilac-business.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/ilac-business.webp"
+                 alt="Copy of ILAC Business English Programme" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">ILAC Business English Programme</span>
+          <span class="ev-issuer">ILAC (International Language Academy of Canada)</span>
+        </a>
+      </li>
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/kgic-translation.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/kgic-translation.webp"
+                 alt="Copy of KGIBC Interpretation &amp; Translation Programme" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">KGIBC Interpretation &amp; Translation Programme</span>
+          <span class="ev-issuer">KGIBC (King George International Business College)</span>
+        </a>
+      </li></ul>
+    </div>
+</section>
+<section class="section wrap" id="contact-en">
+  <div class="contact">
+    <h2>Contact</h2>
+    <p class="lead">Linking experience, connecting people, delivering projects — I look forward to the next conversation.</p>
+    <a class="mail" href="mailto:effective-altruist@naver.com">effective-altruist@naver.com</a>
+    <div class="contact-cta">
+      <a class="btn btn-primary" href="mailto:effective-altruist@naver.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><span>Send Email</span></a>
+      <button class="btn btn-ghost" type="button" data-copy="effective-altruist@naver.com"
+              data-copied="Copied">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 9h10v12H9z"/><path d="M15 9V5H5v12h4"/></svg><span data-copy-label>Copy address</span></button>
+      <button class="btn btn-ghost" type="button" data-print>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 9V3h10v6M7 19H5v-7h14v7h-2"/><path d="M7 15h10v6H7z"/></svg><span>Save as PDF</span></button>
+    </div>
+    <p class="hint">Print from your browser (Ctrl+P) to get the full page, including collapsed sections, on A4.</p>
+  </div>
+</section></div>
+</main>
+<footer class="site-foot"><div class="wrap"><div class="row" data-lang-block="ko"><span>2026년 10월 기준, 읽어 주셔서 감사합니다.</span><span>성하준</span></div><div class="row" data-lang-block="en"><span>As of October 2026. Thank you for reading.</span><span>Hajun Sung</span></div></div></footer>
+<script>
+(function () {
+  var root = document.documentElement;
+
+  function apply(lang) {
+    root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang);
+    document.querySelectorAll('[data-lang-toggle]').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', String(lang === 'en'));
+    });
+    var titleEl = document.querySelector('title[data-title-' + lang + ']');
+    if (titleEl) { document.title = titleEl.getAttribute('data-title-' + lang); }
+  }
+
+  // 선택한 언어를 저장하지 않는다. 저장하면 한번 영문으로 바꾼 뒤부터
+  // 첫 화면이 영문으로 열린다 — 첫 화면은 항상 한국어여야 한다.
+
+  document.addEventListener('click', function (ev) {
+    var toggle = ev.target.closest('[data-lang-toggle]');
+    if (toggle) {
+      ev.preventDefault();
+      var next = root.getAttribute('data-lang') === 'ko' ? 'en' : 'ko';
+      apply(next);
+      return;
+    }
+
+    var printBtn = ev.target.closest('[data-print]');
+    if (printBtn) { ev.preventDefault(); window.print(); return; }
+
+    var copyBtn = ev.target.closest('[data-copy]');
+    if (copyBtn && navigator.clipboard) {
+      ev.preventDefault();
+      navigator.clipboard.writeText(copyBtn.getAttribute('data-copy')).then(function () {
+        var done = copyBtn.getAttribute('data-copied') || 'OK';
+        var label = copyBtn.querySelector('[data-copy-label]');
+        if (!label) { return; }
+        var original = label.textContent;
+        label.textContent = done;
+        setTimeout(function () { label.textContent = original; }, 1600);
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>
