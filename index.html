@@ -291,18 +291,25 @@ strong { color: var(--text); font-weight: 700; }
 
 /* ========== 밸류체인 ========== */
 .vc-flow {
-  display: grid; gap: var(--s2);
+  display: grid; column-gap: var(--s2); row-gap: var(--s1);
   grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: stretch;
 }
 @media (max-width: 980px) { .vc-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .vc-flow { grid-template-columns: minmax(0, 1fr); } }
 
+/* 카드 4요소(머리·구간·회사·수행)를 부모 행 트랙에 얹어 같은 행끼리 높이를 맞춘다.
+   이렇게 하지 않으면 「Construction (Fabrication)」처럼 제목이 길거나 회사명이 두 줄로
+   접히는 카드에서 아래가 통째로 밀려 .vc-org 의 구분선이 어긋난다. 행 간격은 부모의
+   row-gap(--s1)을 쓰므로 카드 사이 간격은 margin-bottom 으로 더해 --s2 를 유지한다.
+   subgrid 미지원 브라우저는 위 flex 선언이 남아 지금과 같은 모양으로 떨어진다. */
 .vc-step {
   position: relative; min-width: 0;
   background: var(--surface-1); border: 1px solid var(--line);
   border-radius: var(--r-md); padding: var(--s3) var(--s2);
   display: flex; flex-direction: column; gap: var(--s1);
+  display: grid; grid-template-rows: subgrid; grid-row: span 4;
+  margin-bottom: var(--s1);
 }
 .vc-step::after {
   content: ""; position: absolute; z-index: 2;
@@ -325,7 +332,10 @@ strong { color: var(--text); font-weight: 700; }
   }
   .vc-step:nth-child(2)::after { display: block; }
 }
-.vc-head { display: flex; align-items: center; gap: var(--s1); flex-wrap: wrap; }
+.vc-head {
+  display: flex; align-items: flex-start; gap: var(--s1); flex-wrap: nowrap;
+  align-self: start;
+}
 .vc-no {
   font-family: var(--mono); font-size: 12px; font-weight: 700;
   color: var(--primary); background: rgba(16,185,129,0.13);
@@ -341,7 +351,7 @@ strong { color: var(--text); font-weight: 700; }
   color: var(--tertiary-bright); background: rgba(20,184,166,0.13);
   border-color: rgba(20,184,166,0.28);
 }
-.vc-phase { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+.vc-phase { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; min-width: 0; }
 .vc-scope { font-size: 12px; color: var(--secondary); font-weight: 600; }
 .vc-org {
   font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em;
@@ -412,15 +422,23 @@ strong { color: var(--text); font-weight: 700; }
 
 /* ========== 핵심역량 ========== */
 .comp-grid {
-  display: grid; gap: var(--s2);
+  display: grid; column-gap: var(--s2); row-gap: var(--s1);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media (max-width: 940px) { .comp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .comp-grid { grid-template-columns: minmax(0, 1fr); } }
+/* 카드 4요소(아이콘·제목·본문·근거)를 부모 행 트랙에 얹어, 같은 행의 카드끼리
+   높이를 맞춘다. 이렇게 하지 않으면 근거 줄 수가 다른 카드에서 구분선이 어긋난다
+   — 근거는 줄 수가 언어·너비마다 바뀌어(한국어 3줄 / 영문 4줄) 고정 높이로는 못 맞춘다.
+   행 간격은 부모의 row-gap(--s1)을 쓰므로 카드 사이 간격은 margin-bottom 으로 더해
+   원래의 --s2 를 유지한다. subgrid 미지원 브라우저에서는 아래 flex 선언이 그대로 남아
+   지금과 같은 모양으로 떨어진다. */
 .comp {
   background: var(--surface-1); border: 1px solid var(--line);
   border-radius: var(--r-md); padding: var(--s3) var(--s2);
   display: flex; flex-direction: column; gap: var(--s1); min-width: 0;
+  display: grid; grid-template-rows: subgrid; grid-row: span 4;
+  margin-bottom: var(--s1);
 }
 .comp-ico {
   width: 38px; height: 38px; border-radius: var(--r-sm);
@@ -436,7 +454,7 @@ strong { color: var(--text); font-weight: 700; }
 .comp .body { font-size: 13.5px; color: var(--text-2); line-height: 1.75; }
 .comp .body strong { color: var(--text); }
 .comp .evidence {
-  margin-top: auto; padding-top: var(--s2); border-top: 1px solid var(--line);
+  padding-top: var(--s2); border-top: 1px solid var(--line);
   font-size: 11.5px; color: var(--text-3); line-height: 1.65;
 }
 .comp .evidence b {
@@ -805,6 +823,11 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
   table.data { min-width: 0; font-size: 8.5pt; }
   .tbl-scroll { overflow: visible; }
   .proj, .epi, .job, .comp, .metric, .vc-step, .cert-card { break-inside: avoid; }
+  .comp { display: flex; grid-row: auto; margin-bottom: 0; }
+  .comp .evidence { margin-top: auto; }
+  .comp-grid { row-gap: var(--s2); }
+  .vc-step { display: flex; grid-row: auto; margin-bottom: 0; }
+  .vc-flow { row-gap: var(--s2); }
   .section { break-inside: auto; }
   a { color: #0e7490 !important; text-decoration: none !important; }
 }
@@ -999,7 +1022,7 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
         <p class="proj-org">(주)에이치엠티메가라인 · 영업본부 · 과장</p>
         <div class="badges"><span class="badge badge-primary">해상풍력</span><span class="badge">해운·운송</span><span class="badge">입찰·제안</span><span class="badge">해외발주처</span></div>
       </div>
-      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">상황</span><div class="text"><p>해외 EPC사의 FLNG 모듈·해상풍력 변전소·Transition Piece 등 대형 구조물은 자항식 중량물 운반선으로만 운송할 수 있습니다. 화물마다 중량·형상과 운송 조건이 달라, 입찰 단계부터 적재계획과 복원성을 검토해 프로젝트별 최적의 운송 방안을 제시해야 했습니다.</p></div></div><div class="blk blk-role"><span class="label-caps">역할</span><div class="text"><p>자항식 중량물 운반선 용선 영업과 사업개발을 맡아, 발주처 RFP/RFQ 검토부터 제안서·견적서 작성, 입찰·제안·수주와 계약 변경 관리까지 담당했습니다.</p></div></div><div class="blk blk-action"><span class="label-caps">수행</span><div class="text"><ul><li>제안서 작성 — Samsung Heavy Industries「Cedar LNG FLNG」, Technip Energies「ODUM Petrochemical」, Lamprell「Norfolk &amp; Southcoast TP 운송」, Lamprell「OW Southcoast TP 운송」</li><li>Voyage Charter / Time Charter 견적서 작성 — Lamprell, SHI, STX, DHL, PTSC, SKPO, Saipem, Technip, Kuehne+Nagel, DEME, Heerema, MCSI 등</li><li>GTPP Project(DL E&amp;C) 변경계약 및 Change Order 처리, 기성고 관리</li><li>Technical material 관리 — Stowage Plan, Vessel Stability, Grillage</li><li>견적 리스트(선표) 관리, 회사 소개서 작성 및 영문화</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">결과</span><div class="text"><p>해상풍력 TP 운송을 포함한 해외 EPC 프로젝트 제안·견적을 수행했습니다. 해상풍력 설비의 운송·설치 제약 조건을 실무로 파악했습니다.</p></div></div></div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">상황</span><div class="text"><p>해외 EPC사의 FLNG 모듈·해상풍력 변전소·Transition Piece 등 대형 구조물은 자항식 중량물 운반선으로 운송할 수 있습니다. 화물마다 중량·형상과 운송 조건이 달라, 입찰 단계부터 적재계획과 복원성을 검토해 프로젝트별 최적의 운송 방안을 제시해야 했습니다.</p></div></div><div class="blk blk-role"><span class="label-caps">역할</span><div class="text"><p>자항식 중량물 운반선 용선 영업과 사업개발을 맡아, 발주처 RFP/RFQ 검토부터 제안서·견적서 작성, 입찰·제안·수주와 계약 변경 관리까지 담당했습니다.</p></div></div><div class="blk blk-action"><span class="label-caps">수행</span><div class="text"><ul><li>제안서 작성 — Samsung Heavy Industries「Cedar LNG FLNG」, Technip Energies「ODUM Petrochemical」, Lamprell「Norfolk &amp; Southcoast TP 운송」, Lamprell「OW Southcoast TP 운송」</li><li>Voyage Charter / Time Charter 견적서 작성 — Lamprell, SHI, STX, DHL, PTSC, SKPO, Saipem, Technip, Kuehne+Nagel, DEME, Heerema, MCSI 등</li><li>GTPP Project(DL E&amp;C) 변경계약 및 Change Order 처리, 기성고 관리</li><li>Technical material 관리 — Stowage Plan, Vessel Stability, Grillage</li><li>견적 리스트(선표) 관리, 회사 소개서 작성 및 영문화</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">결과</span><div class="text"><p>해상풍력 TP 운송을 포함한 해외 EPC 프로젝트 제안·견적을 수행했습니다. 해상풍력 설비의 운송·설치 제약 조건을 실무로 파악했습니다.</p></div></div></div>
     </article>
     <article class="proj">
       <figure class="proj-photo fit-cover">
@@ -1098,7 +1121,7 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
       <div class="job-head"><h3>(주)한진해운</h3>
         <span class="job-period">2010.04 ~ 2013.08 <span class="num">(41개월)</span></span></div>
       <p class="job-role">컨테이너 선대팀 · 2등 기관사 · 해운·물류</p>
-      <p class="job-co">매출 약 9조 7,000억원 / 임직원 약 1,400명 / 국내 최대 해운기업</p>
+      <p class="job-co">매출 약 9조 7,000억원 / 임직원 약 1,400명 / (당시) 국내 최대 해운기업</p>
       <div class="job-body"><p>풀컨테이너선 기관사관으로 승선하며 기계·전기 설비 전반을 운전·정비했습니다.</p><ul><li>압축기, 모터, 발전기, 펌프(기어·원심·피스톤), 청정기, 레벨게이지, 냉동컨테이너, 전기설비 유지보수</li><li>유압기계 및 밸브 정비, 보일러 관리·운전·정비</li><li>연료유·윤활유 소모량 산출 및 재고 관리, 기계 Spare 관리</li><li>신조선 인수 참여 — 한진인디고호(45,169GRT), 삼성중공업 건조</li><li>클레임 관리 및 처리</li></ul></div>
     </article></div>
 </section>
@@ -1135,12 +1158,12 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
   </details>
   <details class="fold">
     <summary><span>교육 이수 전체</span>
-      <span class="count">14건 · 총 329시간</span></summary>
+      <span class="count">15건 · 총 345시간</span></summary>
     <div class="fold-body"><div class="tbl-scroll"><table class="data">
       <thead><tr><th>명칭</th><th>발급기관</th>
         <th>취득일</th><th>시간</th>
         <th>분야</th></tr></thead>
-      <tbody><tr><td class="name">원자력발전계통교육</td><td>한국폴리텍Ⅲ대학</td><td class="n">2017.06.19 ~ 2017.06.30</td><td class="n hours">77</td><td>발전</td></tr><tr><td class="name">[재경관리사] 재무회계 기본이론</td><td>휴넷</td><td class="n">2021.11</td><td class="n hours">36</td><td>회계</td></tr><tr><td class="name">Basic Offshore Safety Induction &amp; Emergency Training (OPITO)</td><td>COENS</td><td class="n">2015.05.11 ~ 2015.05.13</td><td class="n hours">24</td><td>안전</td></tr><tr><td class="name">RT-flex 전자엔진 고등과정</td><td>Wärtsilä Land &amp; Sea Academy</td><td class="n">2012.11.14 ~ 2012.11.16</td><td class="n hours">24</td><td>설비</td></tr><tr><td class="name">냉동컨테이너 진단 및 수리</td><td>한진해운 운항훈련원</td><td class="n">2010.02.03 ~ 2010.02.05</td><td class="n hours">24</td><td>설비</td></tr><tr><td class="name">[재경관리사] 원가관리회계 기본이론</td><td>휴넷</td><td class="n">2021.10</td><td class="n hours">19</td><td>회계</td></tr><tr><td class="name">수출입관리 및 무역실무 (NCS 02040302)</td><td>휴넷</td><td class="n">2019.10</td><td class="n hours">18</td><td>무역</td></tr><tr><td class="name">프로젝트관리 (NCS 01010102)</td><td>휴넷</td><td class="n">2021.10</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">프로젝트관리 중급 (NCS 01010102)</td><td>휴넷</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">경영기획 (NCS 02010101)</td><td>휴넷</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">동력배선 (NCS, HRD-Net)</td><td>한국폴리텍대학 동부산캠퍼스</td><td class="n">2010.01.11 ~ 2010.01.12</td><td class="n hours">16</td><td>설비</td></tr><tr><td class="name">기관실 자동화 시스템 운용 시뮬레이션</td><td>한진해운 운항훈련원</td><td class="n">2010.04.01 ~ 2010.04.10</td><td class="n hours">16</td><td>설비</td></tr><tr><td class="name">할랄과 중동시장 비즈니스 실무</td><td>한국무역협회</td><td class="n">-</td><td class="n hours">16</td><td>무역</td></tr><tr><td class="name">현장 CS 대응방법 (NCS 02010302)</td><td>휴넷</td><td class="n">2020.02.24 ~ 2020.03.24</td><td class="n hours">8</td><td>CS</td></tr></tbody></table></div></div>
+      <tbody><tr><td class="name">원자력발전계통교육</td><td>한국폴리텍Ⅲ대학</td><td class="n">2017.06.19 ~ 2017.06.30</td><td class="n hours">77</td><td>발전</td></tr><tr><td class="name">[재경관리사] 재무회계 기본이론</td><td>휴넷</td><td class="n">2021.11</td><td class="n hours">36</td><td>회계</td></tr><tr><td class="name">Basic Offshore Safety Induction &amp; Emergency Training (OPITO)</td><td>COENS</td><td class="n">2015.05.11 ~ 2015.05.13</td><td class="n hours">24</td><td>안전</td></tr><tr><td class="name">RT-flex 전자엔진 고등과정</td><td>Wärtsilä Land &amp; Sea Academy</td><td class="n">2012.11.14 ~ 2012.11.16</td><td class="n hours">24</td><td>설비</td></tr><tr><td class="name">냉동컨테이너 진단 및 수리</td><td>한진해운 운항훈련원</td><td class="n">2010.02.03 ~ 2010.02.05</td><td class="n hours">24</td><td>설비</td></tr><tr><td class="name">[재경관리사] 원가관리회계 기본이론</td><td>휴넷</td><td class="n">2021.10</td><td class="n hours">19</td><td>회계</td></tr><tr><td class="name">수출입관리 및 무역실무 (NCS 02040302)</td><td>휴넷</td><td class="n">2019.10</td><td class="n hours">18</td><td>무역</td></tr><tr><td class="name">프로젝트관리 (NCS 01010102)</td><td>휴넷</td><td class="n">2021.10</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">프로젝트관리 중급 (NCS 01010102)</td><td>휴넷</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">경영기획 (NCS 02010101)</td><td>휴넷</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">해상 풍력발전단지 개발을 위한 요소 기술</td><td>한국선급</td><td class="n">2023.11.02 ~ 2023.11.03</td><td class="n hours">16</td><td>해상풍력</td></tr><tr><td class="name">동력배선 (NCS, HRD-Net)</td><td>한국폴리텍대학 동부산캠퍼스</td><td class="n">2010.01.11 ~ 2010.01.12</td><td class="n hours">16</td><td>설비</td></tr><tr><td class="name">기관실 자동화 시스템 운용 시뮬레이션</td><td>한진해운 운항훈련원</td><td class="n">2010.04.01 ~ 2010.04.10</td><td class="n hours">16</td><td>설비</td></tr><tr><td class="name">할랄과 중동시장 비즈니스 실무</td><td>한국무역협회</td><td class="n">-</td><td class="n hours">16</td><td>무역</td></tr><tr><td class="name">현장 CS 대응방법 (NCS 02010302)</td><td>휴넷</td><td class="n">2020.02.24 ~ 2020.03.24</td><td class="n hours">8</td><td>CS</td></tr></tbody></table></div></div>
   </details>
   
   <details class="fold">
@@ -1262,8 +1285,21 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
     </div>
     <div class="ev-group">
       <h3 class="ev-group-head"><span>교육이수증</span>
-        <span class="count">13건</span></h3>
+        <span class="count">14건</span></h3>
       <ul class="ev-grid">
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/offshore-wind-elements.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/offshore-wind-elements.webp"
+                 alt="해상 풍력발전단지 개발을 위한 요소 기술 사본" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>원본 보기</span></span>
+          </span>
+          <span class="ev-title">해상 풍력발전단지 개발을 위한 요소 기술</span>
+          <span class="ev-issuer">한국선급</span>
+        </a>
+      </li>
       <li class="ev-card">
         <a class="ev-link" href="./assets/certs/nuclear-systems.webp"
            target="_blank" rel="noopener">
@@ -1624,7 +1660,7 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
         <p class="proj-org">HMT Megaline · Sales Division · Manager</p>
         <div class="badges"><span class="badge badge-primary">Offshore Wind</span><span class="badge">Shipping &amp; Transport</span><span class="badge">Bidding &amp; Proposals</span><span class="badge">International Client</span></div>
       </div>
-      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">Situation</span><div class="text"><p>Large structures for international EPC contractors — FLNG modules, offshore wind substations, transition pieces — can only be moved on self-propelled heavy transport vessels. Every cargo differs in weight, geometry and voyage conditions, so the optimal transport solution had to be established from the bidding stage onwards through stowage planning and stability review.</p></div></div><div class="blk blk-role"><span class="label-caps">Role</span><div class="text"><p>Handling chartering sales and business development for self-propelled heavy transport vessels, I covered everything from client RFP/RFQ review through proposals, quotations, bidding and contract awards to change order management.</p></div></div><div class="blk blk-action"><span class="label-caps">Actions</span><div class="text"><ul><li>Proposals — Samsung Heavy Industries &quot;Cedar LNG FLNG&quot;, Technip Energies &quot;ODUM Petrochemical&quot;, Lamprell &quot;Norfolk &amp; Southcoast TP transport&quot;, Lamprell &quot;OW Southcoast TP transport&quot;</li><li>Voyage charter / time charter quotations — Lamprell, SHI, STX, DHL, PTSC, SKPO, Saipem, Technip, Kuehne+Nagel, DEME, Heerema, MCSI and others</li><li>Change order administration and progress billing on the GTPP Project (DL E&amp;C)</li><li>Technical material control — stowage plan, vessel stability, grillage</li><li>Quotation and vessel position list management; company profile preparation and English version</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">Outcome</span><div class="text"><p>I delivered proposals and quotations for international EPC projects including offshore wind TP transport, and learned the transport and installation constraints of offshore wind components in practice.</p></div></div></div>
+      <div class="proj-body"><div class="blk blk-situation"><span class="label-caps">Situation</span><div class="text"><p>Large structures for international EPC contractors — FLNG modules, offshore wind substations, transition pieces — can be moved on self-propelled heavy transport vessels. Every cargo differs in weight, geometry and voyage conditions, so the optimal transport solution had to be established from the bidding stage onwards through stowage planning and stability review.</p></div></div><div class="blk blk-role"><span class="label-caps">Role</span><div class="text"><p>Handling chartering sales and business development for self-propelled heavy transport vessels, I covered everything from client RFP/RFQ review through proposals, quotations, bidding and contract awards to change order management.</p></div></div><div class="blk blk-action"><span class="label-caps">Actions</span><div class="text"><ul><li>Proposals — Samsung Heavy Industries &quot;Cedar LNG FLNG&quot;, Technip Energies &quot;ODUM Petrochemical&quot;, Lamprell &quot;Norfolk &amp; Southcoast TP transport&quot;, Lamprell &quot;OW Southcoast TP transport&quot;</li><li>Voyage charter / time charter quotations — Lamprell, SHI, STX, DHL, PTSC, SKPO, Saipem, Technip, Kuehne+Nagel, DEME, Heerema, MCSI and others</li><li>Change order administration and progress billing on the GTPP Project (DL E&amp;C)</li><li>Technical material control — stowage plan, vessel stability, grillage</li><li>Quotation and vessel position list management; company profile preparation and English version</li></ul></div></div><div class="blk blk-outcome"><span class="label-caps">Outcome</span><div class="text"><p>I delivered proposals and quotations for international EPC projects including offshore wind TP transport, and learned the transport and installation constraints of offshore wind components in practice.</p></div></div></div>
     </article>
     <article class="proj">
       <figure class="proj-photo fit-cover">
@@ -1723,7 +1759,7 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
       <div class="job-head"><h3>Hanjin Shipping Co., Ltd.</h3>
         <span class="job-period">2010.04 ~ 2013.08 <span class="num">(41months)</span></span></div>
       <p class="job-role">Container Fleet Team · Second Engineer · Shipping &amp; Logistics</p>
-      <p class="job-co">Revenue approx. KRW 9.7tn / approx. 1,400 employees / Korea&#x27;s largest shipping company</p>
+      <p class="job-co">Revenue approx. KRW 9.7tn / approx. 1,400 employees / Korea&#x27;s largest shipping company at the time</p>
       <div class="job-body"><p>Serving as an engineer officer aboard full container ships, I operated and maintained mechanical and electrical plant across the vessel.</p><ul><li>Maintenance of compressors, motors, generators, pumps (gear, centrifugal and piston), purifiers, level gauges, reefer containers and electrical systems</li><li>Hydraulic machinery and valve maintenance; boiler management, operation and maintenance</li><li>Fuel and lubricating oil consumption calculation and inventory control; machinery spares control</li><li>Participation in newbuilding delivery — Hanjin Indigo (45,169 GRT), built by Samsung Heavy Industries</li><li>Claim management and resolution</li></ul></div>
     </article></div>
 </section>
@@ -1760,12 +1796,12 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
   </details>
   <details class="fold">
     <summary><span>All Training</span>
-      <span class="count">14 · 329 hours total</span></summary>
+      <span class="count">15 · 345 hours total</span></summary>
     <div class="fold-body"><div class="tbl-scroll"><table class="data">
       <thead><tr><th>Name</th><th>Issuer</th>
         <th>Obtained</th><th>Hours</th>
         <th>Field</th></tr></thead>
-      <tbody><tr><td class="name">Nuclear Power Systems Training</td><td>Korea Polytechnic III College</td><td class="n">2017.06.19 ~ 2017.06.30</td><td class="n hours">77</td><td>Power</td></tr><tr><td class="name">[CFO Accounting] Financial Accounting Fundamentals</td><td>Hunet</td><td class="n">2021.11</td><td class="n hours">36</td><td>Accounting</td></tr><tr><td class="name">Basic Offshore Safety Induction &amp; Emergency Training (OPITO)</td><td>COENS</td><td class="n">2015.05.11 ~ 2015.05.13</td><td class="n hours">24</td><td>Safety</td></tr><tr><td class="name">RT-flex Electronic Engine Advanced Course</td><td>Wärtsilä Land &amp; Sea Academy</td><td class="n">2012.11.14 ~ 2012.11.16</td><td class="n hours">24</td><td>Equipment</td></tr><tr><td class="name">Reefer Container Diagnosis and Repair</td><td>Hanjin Shipping Training Centre</td><td class="n">2010.02.03 ~ 2010.02.05</td><td class="n hours">24</td><td>Equipment</td></tr><tr><td class="name">[CFO Accounting] Cost Management Accounting Fundamentals</td><td>Hunet</td><td class="n">2021.10</td><td class="n hours">19</td><td>Accounting</td></tr><tr><td class="name">Import-Export Management and Trade Practice (NCS 02040302)</td><td>Hunet</td><td class="n">2019.10</td><td class="n hours">18</td><td>Trade</td></tr><tr><td class="name">Project Management (NCS 01010102)</td><td>Hunet</td><td class="n">2021.10</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Project Management Intermediate (NCS 01010102)</td><td>Hunet</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Business Planning (NCS 02010101)</td><td>Hunet</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Power Wiring (NCS, HRD-Net)</td><td>Korea Polytechnic University Dongbusan Campus</td><td class="n">2010.01.11 ~ 2010.01.12</td><td class="n hours">16</td><td>Equipment</td></tr><tr><td class="name">Engine Room Automation System Operation Simulation</td><td>Hanjin Shipping Training Centre</td><td class="n">2010.04.01 ~ 2010.04.10</td><td class="n hours">16</td><td>Equipment</td></tr><tr><td class="name">Halal and Middle East Market Business Practice</td><td>Korea International Trade Association</td><td class="n">-</td><td class="n hours">16</td><td>Trade</td></tr><tr><td class="name">On-Site CS Response Methods (NCS 02010302)</td><td>Hunet</td><td class="n">2020.02.24 ~ 2020.03.24</td><td class="n hours">8</td><td>CS</td></tr></tbody></table></div></div>
+      <tbody><tr><td class="name">Nuclear Power Systems Training</td><td>Korea Polytechnic III College</td><td class="n">2017.06.19 ~ 2017.06.30</td><td class="n hours">77</td><td>Power</td></tr><tr><td class="name">[CFO Accounting] Financial Accounting Fundamentals</td><td>Hunet</td><td class="n">2021.11</td><td class="n hours">36</td><td>Accounting</td></tr><tr><td class="name">Basic Offshore Safety Induction &amp; Emergency Training (OPITO)</td><td>COENS</td><td class="n">2015.05.11 ~ 2015.05.13</td><td class="n hours">24</td><td>Safety</td></tr><tr><td class="name">RT-flex Electronic Engine Advanced Course</td><td>Wärtsilä Land &amp; Sea Academy</td><td class="n">2012.11.14 ~ 2012.11.16</td><td class="n hours">24</td><td>Equipment</td></tr><tr><td class="name">Reefer Container Diagnosis and Repair</td><td>Hanjin Shipping Training Centre</td><td class="n">2010.02.03 ~ 2010.02.05</td><td class="n hours">24</td><td>Equipment</td></tr><tr><td class="name">[CFO Accounting] Cost Management Accounting Fundamentals</td><td>Hunet</td><td class="n">2021.10</td><td class="n hours">19</td><td>Accounting</td></tr><tr><td class="name">Import-Export Management and Trade Practice (NCS 02040302)</td><td>Hunet</td><td class="n">2019.10</td><td class="n hours">18</td><td>Trade</td></tr><tr><td class="name">Project Management (NCS 01010102)</td><td>Hunet</td><td class="n">2021.10</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Project Management Intermediate (NCS 01010102)</td><td>Hunet</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Business Planning (NCS 02010101)</td><td>Hunet</td><td class="n">2022.01</td><td class="n hours">17</td><td>PM</td></tr><tr><td class="name">Elemental Technologies for Offshore Wind Farm Development</td><td>Korean Register</td><td class="n">2023.11.02 ~ 2023.11.03</td><td class="n hours">16</td><td>Offshore Wind</td></tr><tr><td class="name">Power Wiring (NCS, HRD-Net)</td><td>Korea Polytechnic University Dongbusan Campus</td><td class="n">2010.01.11 ~ 2010.01.12</td><td class="n hours">16</td><td>Equipment</td></tr><tr><td class="name">Engine Room Automation System Operation Simulation</td><td>Hanjin Shipping Training Centre</td><td class="n">2010.04.01 ~ 2010.04.10</td><td class="n hours">16</td><td>Equipment</td></tr><tr><td class="name">Halal and Middle East Market Business Practice</td><td>Korea International Trade Association</td><td class="n">-</td><td class="n hours">16</td><td>Trade</td></tr><tr><td class="name">On-Site CS Response Methods (NCS 02010302)</td><td>Hunet</td><td class="n">2020.02.24 ~ 2020.03.24</td><td class="n hours">8</td><td>CS</td></tr></tbody></table></div></div>
   </details>
   
   <details class="fold">
@@ -1887,8 +1923,21 @@ html[data-lang="en"] [data-lang-block="ko"] { display: none !important; }
     </div>
     <div class="ev-group">
       <h3 class="ev-group-head"><span>Training Certificates</span>
-        <span class="count">13</span></h3>
+        <span class="count">14</span></h3>
       <ul class="ev-grid">
+      <li class="ev-card">
+        <a class="ev-link" href="./assets/certs/offshore-wind-elements.webp"
+           target="_blank" rel="noopener">
+          <span class="ev-shot">
+            <img src="./assets/certs/thumbs/offshore-wind-elements.webp"
+                 alt="Copy of Elemental Technologies for Offshore Wind Farm Development" loading="lazy" decoding="async">
+            <span class="ev-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1"/></svg>
+              <span>View full size</span></span>
+          </span>
+          <span class="ev-title">Elemental Technologies for Offshore Wind Farm Development</span>
+          <span class="ev-issuer">한국선급</span>
+        </a>
+      </li>
       <li class="ev-card">
         <a class="ev-link" href="./assets/certs/nuclear-systems.webp"
            target="_blank" rel="noopener">
